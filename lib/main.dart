@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'src/core/utils/theme/theme.dart';
-import 'src/features/widgets.dart';
+import 'src/features/feature_widgets.dart';
 
 void main() {
   runApp(const MyApp());
