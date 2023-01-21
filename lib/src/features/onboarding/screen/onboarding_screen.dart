@@ -35,9 +35,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-              begin: Alignment.bottomCenter,
-              end: Alignment.center,
-              colors: [Color(0xFF470B1A), Color(0xffFF470B)]),
+            begin: Alignment.bottomCenter,
+            end: Alignment.center,
+            colors: [Color(0x00ff4B3A), Color(0xffFF470B)],
+          ),
         ),
         child: Stack(
           children: [
