@@ -32,14 +32,19 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                   left: 192,
                   right: 62,
                 ),
-                child: Text(
-                  AppString.skip.toUpperCase(),
-                  style: const TextStyle(
-                    fontFamily: AppFonts.fontTextSkip,
-                    fontStyle: FontStyle.normal,
-                    fontWeight: FontWeight.w800,
-                    fontSize: AppDimensions.skipSize,
-                    color: Color.fromRGBO(255, 255, 255, 0.6),
+                child: InkWell(
+                  onTap: () {
+                    print('skip');
+                  },
+                  child: Text(
+                    AppString.skip.toUpperCase(),
+                    style: const TextStyle(
+                      fontFamily: AppFonts.fontTextSkip,
+                      fontStyle: FontStyle.normal,
+                      fontWeight: FontWeight.w800,
+                      fontSize: AppDimensions.skipSize,
+                      color: Color.fromRGBO(255, 255, 255, 0.6),
+                    ),
                   ),
                 ),
               ),

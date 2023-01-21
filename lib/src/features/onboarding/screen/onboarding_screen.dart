@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery/src/features/auth/sigup/screen/signup_screen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../../core/constants/const.dart';
@@ -45,7 +44,6 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               itemBuilder: (context, index) => OnBoardingPage(
                 image: widget.images[index],
                 title: widget.titles[index],
-                // subtitle: widget.subtitles[index],
               ),
               controller: pageController,
               itemCount: widget.titles.length,
