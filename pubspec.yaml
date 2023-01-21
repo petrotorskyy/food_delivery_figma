@@ -41,16 +41,27 @@ flutter:
   assets:
     - assets/logo/
     - assets/splash/png/
+    - assets/onboarding/png/
   
 
   fonts:
     - family: Metropolis
       fonts:
         - asset: assets/font/Metropolis-Regular.ttf
-          weight: 400
+          weight: 100
         - asset: assets/font/Metropolis-Medium.ttf
           weight: 500
         - asset: assets/font/Metropolis-Bold.ttf
           weight: 700  
         - asset: assets/font/Metropolis-Black.ttf
-          weight: 900  
+          weight: 900 
+    - family: Nunito
+      fonts:
+        - asset: assets/font/Nunito-Regular.ttf
+          weight: 100
+        - asset: assets/font/Nunito-Medium.ttf
+          weight: 500
+        - asset: assets/font/Nunito-Bold.ttf
+          weight: 700  
+        - asset: assets/font/Nunito-Black.ttf
+          weight: 900         

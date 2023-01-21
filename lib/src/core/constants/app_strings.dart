@@ -5,4 +5,5 @@ abstract class AppString {
   //OnBoarding
 
   static const String skip = 'skip >>';
+  static const String buttonStart = 'Get started!';
 }

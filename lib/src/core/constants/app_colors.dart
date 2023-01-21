@@ -6,4 +6,8 @@ abstract class AppColors {
 
   //Onboarding
   static const Color onBoardingBg = Color(0xFFFF4B3A);
+  static const Color textColorButtonStart = Color(0xFFFF460A);
+  static const Color colorOnboardingButtonBg = Color(0xFFFFFFFF);
+  static const Color onBoardingScrollingDotsActive = Color(0xFFFFDFD4);
+  static const Color onBoardingScrollingDotsInActive = Color(0xFFFF855D);
 }

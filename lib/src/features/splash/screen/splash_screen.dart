@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../core/constants/const.dart';
 import '../../feature_widgets.dart';
+import '../../onboarding/data/data.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -23,7 +24,10 @@ class _SplashScreenState extends State<SplashScreen> {
       () {
         Navigator.of(context).pushReplacement(
           MaterialPageRoute(
-            builder: (context) => const OnBoardingScreen(),
+            builder: (context) => OnBoardingScreen(
+              images: imageList,
+              titles: titlesList,
+            ),
           ),
         );
       },

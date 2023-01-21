@@ -10,4 +10,19 @@ abstract class AppDimensions {
   static const double group3PngRight = 82;
 
   //Splash Screen
+
+  //OnBoarding Screen
+  static const double logoHeight = 66;
+  static const double logoWidth = 99;
+  static const double ellipse15Height = 90;
+  static const double ellipse15Width = 123;
+
+  static const double skipSize = 18;
+  static const double textSize = 40;
+  static const double imageOnboardHeight = 335;
+  static const double imageOnboardWidth = 335;
+  static const double dotWidth = 9;
+  static const double dotHeight = 9;
+  static const double buttonBorderRadius = 30;
+  static const double buttonFontSize = 17;
 }
