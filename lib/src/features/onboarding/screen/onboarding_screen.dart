@@ -50,11 +50,11 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               controller: pageController,
               itemCount: widget.titles.length,
               onPageChanged: (int index) {
-                //print(pageController.position);
                 setState(() {
-                  // onLastPage != (pageController.position == 3);
                   if (index == 2) {
                     onLastPage = false;
+                  } else {
+                    onLastPage = true;
                   }
                 });
               },
