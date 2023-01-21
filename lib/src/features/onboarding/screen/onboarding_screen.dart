@@ -51,7 +51,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               itemCount: widget.titles.length,
               onPageChanged: (int index) {
                 setState(() {
-                  index == 2 ? onLastPage = false : onLastPage = true;
+                  index == (widget.titles.length - 1)
+                      ? onLastPage = false
+                      : onLastPage = true;
                 });
               },
             ),
