@@ -92,22 +92,6 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 ),
               ),
             ),
-            // Padding(
-            //   padding: const EdgeInsets.only(bottom: 50.0),
-            //   child: Align(
-            //     alignment: Alignment.bottomCenter,
-            //     child: SmoothPageIndicator(
-            //       controller: pageController,
-            //       count: widget.titles.length,
-            //       effect: const ScrollingDotsEffect(
-            //           activeDotColor: AppColors.onBoardingScrollingDotsActive,
-            //           dotColor: AppColors.onBoardingScrollingDotsInActive,
-            //           dotWidth: AppDimensions.dotWidth,
-            //           dotHeight: AppDimensions.dotWidth,
-            //           fixedCenter: true),
-            //     ),
-            //   ),
-            // ),
           ],
         ),
       ),
