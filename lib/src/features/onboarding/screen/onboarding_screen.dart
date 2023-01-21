@@ -21,6 +21,8 @@ class OnBoardingScreen extends StatefulWidget {
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
   PageController pageController = PageController();
+  bool onLastPage = true;
+
   @override
   void dispose() {
     pageController.dispose();
@@ -34,8 +36,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-              begin: Alignment.bottomLeft,
-              end: Alignment.bottomRight,
+              begin: Alignment.bottomCenter,
+              end: Alignment.center,
               colors: [Color(0xFF470B1A), Color(0xffFF470B)]),
         ),
         child: Stack(
@@ -48,12 +50,22 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               controller: pageController,
               itemCount: widget.titles.length,
               onPageChanged: (int index) {
-                print(pageController.position);
+                //print(pageController.position);
+                setState(() {
+                  // onLastPage != (pageController.position == 3);
+                  if (index == 2) {
+                    onLastPage = false;
+                  }
+                });
               },
             ),
             Visibility(
-              //visible: widget.index + 1 == widget.titles.length,
-              child: Padding(
+              // visible: state.currentPageCount + 1 == widget.titles.length,
+              visible: onLastPage,
+              maintainSize: true,
+              maintainAnimation: true,
+              maintainState: true,
+              replacement: Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Align(
                   alignment: Directionality.of(context) == TextDirection.ltr
@@ -62,23 +74,40 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   child: const OnNextButton(),
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 50.0),
-              child: Align(
-                alignment: Alignment.bottomCenter,
-                child: SmoothPageIndicator(
-                  controller: pageController,
-                  count: widget.titles.length,
-                  effect: const ScrollingDotsEffect(
-                      activeDotColor: AppColors.onBoardingScrollingDotsActive,
-                      dotColor: AppColors.onBoardingScrollingDotsInActive,
-                      dotWidth: AppDimensions.dotWidth,
-                      dotHeight: AppDimensions.dotWidth,
-                      fixedCenter: true),
+
+              child: Padding(
+                padding: const EdgeInsets.only(bottom: 50.0),
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: SmoothPageIndicator(
+                    controller: pageController,
+                    count: widget.titles.length,
+                    effect: const ScrollingDotsEffect(
+                        activeDotColor: AppColors.onBoardingScrollingDotsActive,
+                        dotColor: AppColors.onBoardingScrollingDotsInActive,
+                        dotWidth: AppDimensions.dotWidth,
+                        dotHeight: AppDimensions.dotWidth,
+                        fixedCenter: true),
+                  ),
                 ),
               ),
-            )
+            ),
+            // Padding(
+            //   padding: const EdgeInsets.only(bottom: 50.0),
+            //   child: Align(
+            //     alignment: Alignment.bottomCenter,
+            //     child: SmoothPageIndicator(
+            //       controller: pageController,
+            //       count: widget.titles.length,
+            //       effect: const ScrollingDotsEffect(
+            //           activeDotColor: AppColors.onBoardingScrollingDotsActive,
+            //           dotColor: AppColors.onBoardingScrollingDotsInActive,
+            //           dotWidth: AppDimensions.dotWidth,
+            //           dotHeight: AppDimensions.dotWidth,
+            //           fixedCenter: true),
+            //     ),
+            //   ),
+            // ),
           ],
         ),
       ),
