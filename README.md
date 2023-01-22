@@ -1,16 +1,10 @@
-# food_delivery
+# Flutter Food Delivery Application
 
-A new Flutter project.
+This application is not completed yet. Currently, I am working on it.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is a starting point for a Flutter application from Figma.
 
-A few resources to get you started if this is your first Flutter project:
+https://www.figma.com/file/UejHMOxhcngpcj6nvoo68e/Fast-Food---A-Food-Delivery-App-(Community)-(Community)?node-id=31%3A19&t=H6vbo6sUVuNSvxR9-0
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

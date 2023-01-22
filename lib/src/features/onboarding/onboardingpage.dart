@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/src/core/constants/const.dart';
 
-import 'widgets/logo_onboarding.dart';
+import 'widgets/widgets.dart';
 
 class OnBoardingPage extends StatefulWidget {
   final dynamic image;
@@ -23,33 +23,6 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(
-                  top: 36,
-                  left: 192,
-                  right: 62,
-                ),
-                child: InkWell(
-                  onTap: () {
-                    print('skip');
-                  },
-                  child: Text(
-                    AppString.skip.toUpperCase(),
-                    style: const TextStyle(
-                      fontFamily: AppFonts.fontTextSkip,
-                      fontStyle: FontStyle.normal,
-                      fontWeight: FontWeight.w800,
-                      fontSize: AppDimensions.skipSize,
-                      color: Color.fromRGBO(255, 255, 255, 0.6),
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
           const SizedBox(
             height: 15,
           ),

@@ -31,6 +31,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       backgroundColor: AppColors.onBoardingBg,
       body: Container(
         decoration: const BoxDecoration(
@@ -42,6 +43,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         ),
         child: Stack(
           children: [
+            ButtonSkip(pageController: pageController, widget: widget),
             PageView.builder(
               itemBuilder: (context, index) => OnBoardingPage(
                 image: widget.images[index],

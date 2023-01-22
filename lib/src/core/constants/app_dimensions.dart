@@ -25,4 +25,5 @@ abstract class AppDimensions {
   static const double dotHeight = 9;
   static const double buttonBorderRadius = 30;
   static const double buttonFontSize = 17;
+  static const double buttonBorderCircularOnboard = 30;
 }

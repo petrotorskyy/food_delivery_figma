@@ -5,4 +5,5 @@ class AppFonts {
   //Onboarding
   static const String fontOnBoardingScreen = 'Metropolis';
   static const String fontTextSkip = 'Nunito';
+  static const String fontTextButtonOnboarding = 'Poppins';
 }
