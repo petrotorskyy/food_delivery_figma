@@ -10,4 +10,6 @@ abstract class AppColors {
   static const Color colorOnboardingButtonBg = Color(0xFFFFFFFF);
   static const Color onBoardingScrollingDotsActive = Color(0xFFFFDFD4);
   static const Color onBoardingScrollingDotsInActive = Color(0xFFFF855D);
+  static const Color textSkipColor = Color.fromRGBO(255, 255, 255, 0.6);
+  static const Color textSkipShadow = Color.fromRGBO(0, 0, 0, 0.25);
 }

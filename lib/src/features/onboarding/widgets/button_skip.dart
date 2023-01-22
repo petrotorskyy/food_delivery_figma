@@ -26,7 +26,6 @@ class ButtonSkip extends StatelessWidget {
           ),
           child: InkWell(
             onTap: () {
-              print('skip');
               pageController.jumpTo(widget.titles.length - 1);
             },
             child: Text(
@@ -36,7 +35,14 @@ class ButtonSkip extends StatelessWidget {
                 fontStyle: FontStyle.normal,
                 fontWeight: FontWeight.w800,
                 fontSize: AppDimensions.skipSize,
-                color: Color.fromRGBO(255, 255, 255, 0.6),
+                color: AppColors.textSkipColor,
+                shadows: [
+                  Shadow(
+                    color: AppColors.textSkipShadow,
+                    offset: Offset(3, 3),
+                    blurRadius: 15,
+                  ),
+                ],
               ),
             ),
           ),

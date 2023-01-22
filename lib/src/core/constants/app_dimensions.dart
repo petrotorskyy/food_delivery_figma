@@ -18,9 +18,9 @@ abstract class AppDimensions {
   static const double ellipse15Width = 123;
 
   static const double skipSize = 18;
-  static const double textSize = 40;
-  static const double imageOnboardHeight = 335;
-  static const double imageOnboardWidth = 335;
+  static const double textSize = 50;
+  static const double imageOnboardHeight = 300;
+  static const double imageOnboardWidth = 300;
   static const double dotWidth = 9;
   static const double dotHeight = 9;
   static const double buttonBorderRadius = 30;

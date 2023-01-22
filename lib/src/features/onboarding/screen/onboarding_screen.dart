@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/constants/const.dart';
-import '../onboardingpage.dart';
+import '../onboarding_page.dart';
 import '../widgets/widgets.dart';
 
 class OnBoardingScreen extends StatefulWidget {
@@ -41,29 +41,32 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             colors: [Color(0x00ff4B3A), Color(0xffFF470B)],
           ),
         ),
-        child: Stack(
-          children: [
-            ButtonSkip(pageController: pageController, widget: widget),
-            PageView.builder(
-              itemBuilder: (context, index) => OnBoardingPage(
-                image: widget.images[index],
-                title: widget.titles[index],
+        child: Padding(
+          padding: const EdgeInsets.only(top: 25),
+          child: Stack(
+            children: [
+              ButtonSkip(pageController: pageController, widget: widget),
+              PageView.builder(
+                itemBuilder: (context, index) => OnBoardingPage(
+                  image: widget.images[index],
+                  title: widget.titles[index],
+                ),
+                controller: pageController,
+                itemCount: widget.titles.length,
+                onPageChanged: (int index) {
+                  setState(() {
+                    index == (widget.titles.length - 1)
+                        ? onLastPage = false
+                        : onLastPage = true;
+                  });
+                },
               ),
-              controller: pageController,
-              itemCount: widget.titles.length,
-              onPageChanged: (int index) {
-                setState(() {
-                  index == (widget.titles.length - 1)
-                      ? onLastPage = false
-                      : onLastPage = true;
-                });
-              },
-            ),
-            DotOrButtonVisibility(
-                onLastPage: onLastPage,
-                pageController: pageController,
-                widget: widget),
-          ],
+              DotOrButtonVisibility(
+                  onLastPage: onLastPage,
+                  pageController: pageController,
+                  widget: widget),
+            ],
+          ),
         ),
       ),
     );
