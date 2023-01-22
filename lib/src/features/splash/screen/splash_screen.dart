@@ -9,6 +9,15 @@ class SplashScreen extends StatefulWidget {
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
+
+  static const String routeName = '/';
+
+  static Route route() {
+    return MaterialPageRoute(
+      builder: (_) => const SplashScreen(),
+      settings: const RouteSettings(name: routeName),
+    );
+  }
 }
 
 class _SplashScreenState extends State<SplashScreen> {
