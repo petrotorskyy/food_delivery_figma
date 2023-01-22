@@ -8,3 +8,5 @@ This project is a starting point for a Flutter application from Figma.
 
 https://www.figma.com/file/UejHMOxhcngpcj6nvoo68e/Fast-Food---A-Food-Delivery-App-(Community)-(Community)?node-id=31%3A19&t=H6vbo6sUVuNSvxR9-0
 
+
+https://www.youtube.com/watch?v=kJ9HZ4A4FXw&t=1272s
