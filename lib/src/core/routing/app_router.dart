@@ -3,7 +3,6 @@ import 'package:food_delivery/src/features/splash/screen/splash_screen.dart';
 
 class AppRouter {
   static Route onGenerateRoute(RouteSettings settings) {
-    print('Route: ${settings.name}');
     switch (settings.name) {
       case '/':
         return SplashScreen.route();

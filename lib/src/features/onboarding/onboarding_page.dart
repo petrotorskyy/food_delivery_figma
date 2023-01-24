@@ -23,12 +23,9 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const SizedBox(
-            height: 15,
-          ),
           const LogoOnboarding(),
           const SizedBox(
-            height: 15,
+            height: 5,
           ),
           Text(
             widget.title,
@@ -40,19 +37,21 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
             ),
             textAlign: TextAlign.center,
           ),
-          widget.image is String
-              ? Image.asset(
-                  widget.image,
-                  width: AppDimensions.imageOnboardWidth,
-                  height: AppDimensions.imageOnboardHeight,
-                  fit: BoxFit.cover,
-                )
-              : Icon(
-                  widget.image as IconData,
-                  color: Colors.white,
-                  size: 150,
-                ),
-          const SizedBox(height: 40),
+          Expanded(
+            child: widget.image is String
+                ? Image.asset(
+                    widget.image,
+                    width: AppDimensions.imageOnboardWidth,
+                    height: AppDimensions.imageOnboardHeight,
+                    fit: BoxFit.cover,
+                  )
+                : Icon(
+                    widget.image as IconData,
+                    color: Colors.white,
+                    size: 150,
+                  ),
+          ),
+          const SizedBox(height: 5),
         ],
       ),
     );

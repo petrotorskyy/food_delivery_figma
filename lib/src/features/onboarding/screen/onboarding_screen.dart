@@ -41,12 +41,11 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             colors: [Color(0x00ff4B3A), Color(0xffFF470B)],
           ),
         ),
-        child: Padding(
-          padding: const EdgeInsets.only(top: 25),
-          child: Stack(
-            children: [
-              ButtonSkip(pageController: pageController, widget: widget),
-              PageView.builder(
+        child: Column(
+          children: [
+            ButtonSkip(pageController: pageController, widget: widget),
+            Expanded(
+              child: PageView.builder(
                 itemBuilder: (context, index) => OnBoardingPage(
                   image: widget.images[index],
                   title: widget.titles[index],
@@ -61,12 +60,12 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   });
                 },
               ),
-              DotOrButtonVisibility(
-                  onLastPage: onLastPage,
-                  pageController: pageController,
-                  widget: widget),
-            ],
-          ),
+            ),
+            DotOrButtonVisibility(
+                onLastPage: onLastPage,
+                pageController: pageController,
+                widget: widget),
+          ],
         ),
       ),
     );

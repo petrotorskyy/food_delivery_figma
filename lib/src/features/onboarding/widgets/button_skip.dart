@@ -20,13 +20,13 @@ class ButtonSkip extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.only(
-            top: 36,
+            top: 60,
             left: 192,
             right: 62,
           ),
           child: InkWell(
             onTap: () {
-              pageController.jumpTo(widget.titles.length - 1);
+              pageController.jumpToPage(widget.titles.length - 1);
             },
             child: Text(
               AppString.skip.toUpperCase(),
