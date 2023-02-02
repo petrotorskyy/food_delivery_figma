@@ -21,6 +21,10 @@ abstract class AppDimensions {
   static const double textSize = 50;
   static const double imageOnboardHeight = 265;
   static const double imageOnboardWidth = 270;
+
+  //icon size
+  static const double iconSizeOnBoarding = 150;
+
   static const double dotWidth = 9;
   static const double dotHeight = 9;
   static const double buttonBorderRadius = 30;

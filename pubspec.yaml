@@ -1,34 +1,29 @@
 name: food_delivery
 description: A new Flutter project.
 
-
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
-
 
 version: 1.0.0+1
 
 environment:
   sdk: '>=2.18.4 <3.0.0'
 
-
 dependencies:
+  bordered_text: ^2.0.0
+  cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
-
-
-  cupertino_icons: ^1.0.2
+  flutter_svg: ^1.1.6
   smooth_page_indicator: ^1.0.0+2
 
 dev_dependencies:
+
+  flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
 
-  
-  flutter_lints: ^2.0.0
-
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
-
 # The following section is specific to Flutter packages.
 flutter:
 
@@ -37,12 +32,10 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  
   assets:
     - assets/logo/
     - assets/splash/png/
     - assets/onboarding/png/
-  
 
   fonts:
     - family: Metropolis
@@ -52,9 +45,9 @@ flutter:
         - asset: assets/font/Metropolis-Medium.ttf
           weight: 500
         - asset: assets/font/Metropolis-Bold.ttf
-          weight: 700  
+          weight: 700
         - asset: assets/font/Metropolis-Black.ttf
-          weight: 900 
+          weight: 900
     - family: Nunito
       fonts:
         - asset: assets/font/Nunito-Regular.ttf
@@ -62,9 +55,9 @@ flutter:
         - asset: assets/font/Nunito-Medium.ttf
           weight: 500
         - asset: assets/font/Nunito-Bold.ttf
-          weight: 700  
+          weight: 700
         - asset: assets/font/Nunito-Black.ttf
-          weight: 900         
+          weight: 900
     - family: Poppins
       fonts:
         - asset: assets/font/Poppins-Regular.ttf
@@ -72,6 +65,6 @@ flutter:
         - asset: assets/font/Poppins-Medium.ttf
           weight: 500
         - asset: assets/font/Poppins-Bold.ttf
-          weight: 700  
+          weight: 700
         - asset: assets/font/Poppins-Black.ttf
-          weight: 900         
+          weight: 900

@@ -48,7 +48,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                 : Icon(
                     widget.image as IconData,
                     color: Colors.white,
-                    size: 150,
+                    size: AppDimensions.iconSizeOnBoarding,
                   ),
           ),
           const SizedBox(height: 5),

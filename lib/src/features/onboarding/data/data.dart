@@ -1,4 +1,4 @@
-import 'package:food_delivery/src/core/constants/app_png.dart';
+import '../../../core/constants/const.dart';
 
 ///list of strings containing onBoarding titles
 final List<String> titlesList = [

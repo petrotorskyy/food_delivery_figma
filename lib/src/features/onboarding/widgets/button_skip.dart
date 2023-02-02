@@ -1,3 +1,4 @@
+import 'package:bordered_text/bordered_text.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/constants/const.dart';
@@ -15,6 +16,23 @@ class ButtonSkip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var text = Text(
+      AppString.skip.toUpperCase(),
+      style: const TextStyle(
+        fontFamily: AppFonts.fontTextSkip,
+        fontStyle: FontStyle.normal,
+        fontWeight: FontWeight.w800,
+        fontSize: AppDimensions.skipSize,
+        color: AppColors.textSkipColor,
+        shadows: [
+          Shadow(
+            color: AppColors.textSkipShadow,
+            offset: Offset(3, 3),
+            blurRadius: 15,
+          ),
+        ],
+      ),
+    );
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
@@ -28,23 +46,13 @@ class ButtonSkip extends StatelessWidget {
             onTap: () {
               pageController.jumpToPage(widget.titles.length - 1);
             },
-            child: Text(
-              AppString.skip.toUpperCase(),
-              style: const TextStyle(
-                fontFamily: AppFonts.fontTextSkip,
-                fontStyle: FontStyle.normal,
-                fontWeight: FontWeight.w800,
-                fontSize: AppDimensions.skipSize,
-                color: AppColors.textSkipColor,
-                shadows: [
-                  Shadow(
-                    color: AppColors.textSkipShadow,
-                    offset: Offset(3, 3),
-                    blurRadius: 15,
-                  ),
-                ],
-              ),
-            ),
+            child: pageController.page == (widget.titles.length - 1)
+                ? BorderedText(
+                    strokeWidth: 5.0,
+                    strokeColor: AppColors.textSkipShadow,
+                    child: text,
+                  )
+                : text,
           ),
         ),
       ],
