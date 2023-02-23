@@ -6,4 +6,5 @@ class AppFonts {
   static const String fontOnBoardingScreen = 'Metropolis';
   static const String fontTextSkip = 'Nunito';
   static const String fontTextButtonOnboarding = 'Poppins';
+  static const String fontNunito = 'Nunito';
 }

@@ -30,4 +30,11 @@ abstract class AppDimensions {
   static const double buttonBorderRadius = 30;
   static const double buttonFontSize = 17;
   static const double buttonBorderCircularOnboard = 30;
+
+  //Welcome
+  static const double titleWelcomeSize = 55;
+
+  //SignIn
+  static const double headerSignInWidth = 414;
+  static const double headerSignInHeight = 345;
 }

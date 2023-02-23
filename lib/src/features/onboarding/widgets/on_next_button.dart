@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery/src/features/auth/sigup/screen/signup_screen.dart';
 
 import '../../../core/constants/const.dart';
+import '../../feature_widgets.dart';
 
 class OnNextButton extends StatelessWidget {
   const OnNextButton({
@@ -38,6 +38,6 @@ class OnNextButton extends StatelessWidget {
 
   void onNextClick(BuildContext context) {
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => const SignUpScreen()));
+        context, MaterialPageRoute(builder: (context) => const SignInScreen()));
   }
 }

@@ -8,9 +8,8 @@ ThemeData theme() {
     primaryColorDark: const Color(0xFFAA9D39),
     primaryColorLight: const Color(0xFFFFF9CC),
     scaffoldBackgroundColor: Colors.white,
-    backgroundColor: const Color(0xFFFFFCE8),
     textTheme: TextTheme(
-      headline5: TextStyle(
+      headlineSmall: TextStyle(
         fontWeight: FontWeight.normal,
         fontFamily: AppFonts.fontSplashScreenText,
         fontSize: AppDimensions.fontHeight,
@@ -24,6 +23,24 @@ ThemeData theme() {
           ..strokeWidth = 2
           ..color = const Color(0xFF000000)
           ..style = PaintingStyle.stroke,
+      ),
+      titleLarge: const TextStyle(
+        fontFamily: AppFonts.fontOnBoardingScreen,
+        fontWeight: FontWeight.w100,
+        fontSize: AppDimensions.titleWelcomeSize,
+        color: AppColors.signInHeaderColor,
+      ),
+      titleSmall: const TextStyle(
+        fontFamily: AppFonts.fontNunito,
+        fontWeight: FontWeight.w600,
+        fontSize: 20,
+        color: Color.fromRGBO(255, 255, 255, 0.6),
+      ),
+      labelSmall: const TextStyle(
+        fontFamily: AppFonts.fontNunito,
+        fontWeight: FontWeight.w800,
+        fontSize: 18,
+        color: Color.fromRGBO(255, 255, 255, 0.6),
       ),
     ),
   );

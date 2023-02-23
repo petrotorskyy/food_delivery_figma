@@ -12,4 +12,9 @@ abstract class AppColors {
   static const Color onBoardingScrollingDotsInActive = Color(0xFFFF855D);
   static const Color textSkipColor = Color.fromRGBO(255, 255, 255, 0.6);
   static const Color textSkipShadow = Color.fromRGBO(0, 0, 0, 0.25);
+
+  //SignIn Screen
+
+  static const Color signInScreenBg = Color(0xFFF2F2F2);
+  static const Color signInHeaderColor = Color(0xffffffff);
 }

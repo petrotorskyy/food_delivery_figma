@@ -7,6 +7,13 @@ final List<String> titlesList = [
   'Fast, rescued food at your service.',
 ];
 
+final List<String> subtitlesList = [
+  '',
+  '',
+  '',
+  'Unlock the world of regular and rescued food by setting up your delivery address.',
+];
+
 final List<dynamic> imageList = [
   AppPng.imageFirst,
   AppPng.imageSecond,
