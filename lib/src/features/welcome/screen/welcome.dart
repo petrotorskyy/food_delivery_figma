@@ -83,17 +83,18 @@ class Welcome extends StatelessWidget {
           Row(
             children: [
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(
-                      left: 25,
+                      left: 35,
                     ),
                     child: Text(AppString.selLocationWelcome,
                         textAlign: TextAlign.left,
                         style: Theme.of(context).textTheme.labelSmall),
                   ),
                   const SizedBox(
-                    height: 10,
+                    height: 30,
                   ),
                   Padding(
                     padding: const EdgeInsets.only(
