@@ -14,10 +14,11 @@ This project is a starting point for a Flutter application from Figma.
 ## Screens it contains:
 <ul><li>Splash</li>
 <li>Onboarding</li>
+<li>Welcome</li>
 <li>Login</li>
 <li>Forgot Password</li>
 <li>Sign Up</li>
-<li>Welcome</li>
+
 </ul>
 
 <p>Thanks for your love and support</p> 
