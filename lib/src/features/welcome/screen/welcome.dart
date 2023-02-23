@@ -72,7 +72,7 @@ class Welcome extends StatelessWidget {
               const SizedBox(
                 height: 15,
               ),
-              Text(AppString.subTitleWelcom,
+              Text(AppString.subTitleWelcome,
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.titleSmall),
               const SizedBox(
@@ -102,7 +102,7 @@ class Welcome extends StatelessWidget {
                     child: Button(
                       onPress: () => locateMe(context),
                       icon: AppSvg.locateSvg,
-                      text: AppString.LocateMeButton,
+                      text: AppString.locateMeButton,
                     ),
                   ),
                   const SizedBox(
@@ -115,7 +115,7 @@ class Welcome extends StatelessWidget {
                     child: Button(
                       onPress: () => provideDeliveryLocation(context),
                       icon: AppSvg.provideSvg,
-                      text: AppString.ProvideDeliveryLocationButton,
+                      text: AppString.provideDeliveryLocationButton,
                     ),
                   ),
                 ],

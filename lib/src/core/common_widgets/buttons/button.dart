@@ -25,7 +25,7 @@ class Button extends StatelessWidget {
           borderRadius:
               BorderRadius.circular(AppDimensions.buttonBorderCircular30),
         ),
-        padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         textStyle: const TextStyle(
           fontFamily: AppFonts.fontTextButtonOnboarding,
           fontSize: 30,
@@ -35,7 +35,6 @@ class Button extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           svg1 = SvgPicture.asset(
-            //AppSvg.locateSvg,
             icon,
             height: 35,
             width: 33,
@@ -44,7 +43,6 @@ class Button extends StatelessWidget {
             width: 10,
           ),
           Text(
-            // AppString.LocateMeButton,
             text,
             style: const TextStyle(
               fontSize: AppDimensions.textLocateMeButton,

@@ -10,10 +10,10 @@ abstract class AppString {
   //Welcome
 
   static const String titleWelcome = 'Welcome,\nSumanya!';
-  static const String subTitleWelcom =
+  static const String subTitleWelcome =
       'Unlock the world of regular\n and rescued food by setting up\n your delivery address.';
   static const String selLocationWelcome = 'SELECT LOCATION';
-  static const String LocateMeButton = 'Locate Me';
-  static const String ProvideDeliveryLocationButton =
+  static const String locateMeButton = 'Locate Me';
+  static const String provideDeliveryLocationButton =
       'Provide Delivery Location';
 }
