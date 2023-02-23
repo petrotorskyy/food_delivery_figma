@@ -2,15 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../core/constants/const.dart';
+import '../../../core/common_widgets/buttons/button.dart';
+import '../../feature_widgets.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({super.key});
 
   @override
   Widget build(BuildContext context) {
-    double heightSp = MediaQuery.of(context).size.height;
-    double widthSp = MediaQuery.of(context).size.width;
     final Widget svg;
+
     var text = Text(
       AppString.skip.toUpperCase(),
       style: const TextStyle(
@@ -75,15 +76,61 @@ class Welcome extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.titleSmall),
               const SizedBox(
-                height: 75,
+                height: 55,
               ),
-              Text(AppString.selLocationWelcome,
-                  textAlign: TextAlign.left,
-                  style: Theme.of(context).textTheme.labelSmall),
+            ],
+          ),
+          Row(
+            children: [
+              Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      left: 25,
+                    ),
+                    child: Text(AppString.selLocationWelcome,
+                        textAlign: TextAlign.left,
+                        style: Theme.of(context).textTheme.labelSmall),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      left: 25,
+                    ),
+                    child: Button(
+                      onPress: () => locateMe(context),
+                      icon: AppSvg.locateSvg,
+                      text: AppString.LocateMeButton,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      left: 25,
+                    ),
+                    child: Button(
+                      onPress: () => provideDeliveryLocation(context),
+                      icon: AppSvg.provideSvg,
+                      text: AppString.ProvideDeliveryLocationButton,
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ],
       ),
     );
   }
+
+  locateMe(BuildContext context) {
+    Navigator.pushReplacement(
+        context, MaterialPageRoute(builder: (context) => const SignInScreen()));
+  }
+
+  provideDeliveryLocation(BuildContext context) {}
 }

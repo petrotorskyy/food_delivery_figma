@@ -33,6 +33,7 @@ flutter:
 
   assets:
     - assets/logo/
+    - assets/welcome/svg/
     - assets/splash/png/
     - assets/onboarding/png/
 

@@ -13,4 +13,7 @@ abstract class AppString {
   static const String subTitleWelcom =
       'Unlock the world of regular\n and rescued food by setting up\n your delivery address.';
   static const String selLocationWelcome = 'SELECT LOCATION';
+  static const String LocateMeButton = 'Locate Me';
+  static const String ProvideDeliveryLocationButton =
+      'Provide Delivery Location';
 }
