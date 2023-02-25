@@ -60,46 +60,42 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               ],
             ),
           ),
-          child: FutureBuilder(
-              future: initializeController(),
-              builder: (BuildContext context, AsyncSnapshot<void> snap) {
-                if (!snap.hasData) {
-                  // Just return a placeholder widget, here it's nothing but you have to return something to avoid errors
-                  return Column(
-                    children: [
-                      ButtonSkip(
-                          pageController: pageController, widget: widget),
-                    ],
-                  );
-                }
-                // ButtonSkip(pageController: pageController, widget: widget),
-                return Column(
-                  children: [
-                    //ButtonSkip(pageController: pageController, widget: widget),
-                    Expanded(
-                      child: PageView.builder(
-                        itemBuilder: (context, index) => OnBoardingPage(
-                          image: widget.images[index],
-                          title: widget.titles[index],
-                        ),
-                        controller: pageController,
-                        itemCount: widget.titles.length,
-                        onPageChanged: (int index) {
-                          setState(() {
-                            index == (widget.titles.length - 1)
-                                ? onLastPage = false
-                                : onLastPage = true;
-                          });
-                        },
-                      ),
-                    ),
-                    DotOrButtonVisibility(
-                        onLastPage: onLastPage,
-                        pageController: pageController,
-                        widget: widget),
-                  ],
-                );
-              }),
+          child: Column(
+            children: [
+              FutureBuilder(
+                future: initializeController(),
+                builder: (BuildContext context, AsyncSnapshot<void> snap) {
+                  if (!snap.hasData) {
+                    return const Text('Error pageController');
+                  }
+
+                  return ButtonSkip(
+                      pageController: pageController, widget: widget);
+                },
+              ),
+              Expanded(
+                child: PageView.builder(
+                  itemBuilder: (context, index) => OnBoardingPage(
+                    image: widget.images[index],
+                    title: widget.titles[index],
+                  ),
+                  controller: pageController,
+                  itemCount: widget.titles.length,
+                  onPageChanged: (int index) {
+                    setState(() {
+                      index == (widget.titles.length - 1)
+                          ? onLastPage = false
+                          : onLastPage = true;
+                    });
+                  },
+                ),
+              ),
+              DotOrButtonVisibility(
+                  onLastPage: onLastPage,
+                  pageController: pageController,
+                  widget: widget),
+            ],
+          ),
         ));
   }
 }
