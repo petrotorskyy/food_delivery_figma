@@ -75,6 +75,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 // ButtonSkip(pageController: pageController, widget: widget),
                 return Column(
                   children: [
+                    //ButtonSkip(pageController: pageController, widget: widget),
                     Expanded(
                       child: PageView.builder(
                         itemBuilder: (context, index) => OnBoardingPage(
