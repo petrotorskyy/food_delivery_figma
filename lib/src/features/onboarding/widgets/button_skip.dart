@@ -17,8 +17,6 @@ class ButtonSkip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('currentpage=${pageController.page}');
-
     var text = Text(
       AppString.skip.toUpperCase(),
       style: const TextStyle(
