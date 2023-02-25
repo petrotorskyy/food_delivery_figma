@@ -44,18 +44,17 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
-      backgroundColor: AppColors.onBoardingBg,
+      //backgroundColor: AppColors.onBoardingBg,
       body: Container(
+        width: double.maxFinite,
+        height: double.maxFinite,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.topCenter,
+            begin: Alignment.bottomCenter,
+            end: Alignment.center,
             colors: [
-              Color(0x00ff4B3A),
+              Color(0xffFF470B),
               AppColors.onBoardingBg,
-              // Color(0xffFF470B),
-              //  Color(0x00ff4B3A),
-              //Color(0xffFF470B),
             ],
           ),
         ),
