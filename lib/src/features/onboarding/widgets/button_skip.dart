@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:bordered_text/bordered_text.dart';
 import 'package:flutter/material.dart';
 
@@ -16,6 +17,8 @@ class ButtonSkip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('currentpage=${pageController.page}');
+
     var text = Text(
       AppString.skip.toUpperCase(),
       style: const TextStyle(
@@ -46,13 +49,15 @@ class ButtonSkip extends StatelessWidget {
             onTap: () {
               pageController.jumpToPage(widget.titles.length - 1);
             },
-            child: 1 == 1 //pageController.page == (widget.titles.length - 1)
-                ? BorderedText(
-                    strokeWidth: 5.0,
-                    strokeColor: AppColors.textSkipShadow,
-                    child: text,
-                  )
-                : text,
+            child: pageController.page == 0
+                ? text
+                : pageController.page == (widget.titles.length - 1)
+                    ? BorderedText(
+                        strokeWidth: 5.0,
+                        strokeColor: AppColors.textSkipShadow,
+                        child: text,
+                      )
+                    : text,
           ),
         ),
       ],

@@ -14,8 +14,8 @@ class FoodDeliveryApp extends StatelessWidget {
       title: 'Food Delivery App',
       theme: theme(),
       home: //const SignInScreen()
-          // const SplashScreen(),
-          const Welcome(),
+          const SplashScreen(),
+      //const Welcome(),
     );
   }
 }

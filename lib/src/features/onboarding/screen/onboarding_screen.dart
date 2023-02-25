@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 import '../../../core/constants/const.dart';
@@ -19,7 +21,7 @@ class OnBoardingScreen extends StatefulWidget {
 }
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
-  PageController pageController = PageController();
+  PageController pageController = PageController(initialPage: 0);
   bool onLastPage = true;
 
   @override
@@ -28,52 +30,75 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     super.dispose();
   }
 
+  Future<bool> initializeController() {
+    Completer<bool> completer = Completer<bool>();
+
+    /// Callback called after widget has been fully built
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      completer.complete(true);
+    });
+
+    return completer.future;
+  } // /initializeController()
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBodyBehindAppBar: true,
-      backgroundColor: AppColors.onBoardingBg,
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.topCenter,
-            colors: [
-              Color(0x00ff4B3A),
-              AppColors.onBoardingBg,
-              // Color(0xffFF470B),
-              //  Color(0x00ff4B3A),
-              //Color(0xffFF470B),
-            ],
-          ),
-        ),
-        child: Column(
-          children: [
-            ButtonSkip(pageController: pageController, widget: widget),
-            Expanded(
-              child: PageView.builder(
-                itemBuilder: (context, index) => OnBoardingPage(
-                  image: widget.images[index],
-                  title: widget.titles[index],
-                ),
-                controller: pageController,
-                itemCount: widget.titles.length,
-                onPageChanged: (int index) {
-                  setState(() {
-                    index == (widget.titles.length - 1)
-                        ? onLastPage = false
-                        : onLastPage = true;
-                  });
-                },
-              ),
+        extendBodyBehindAppBar: true,
+        backgroundColor: AppColors.onBoardingBg,
+        body: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.topCenter,
+              colors: [
+                Color(0x00ff4B3A),
+                AppColors.onBoardingBg,
+                // Color(0xffFF470B),
+                //  Color(0x00ff4B3A),
+                //Color(0xffFF470B),
+              ],
             ),
-            DotOrButtonVisibility(
-                onLastPage: onLastPage,
-                pageController: pageController,
-                widget: widget),
-          ],
-        ),
-      ),
-    );
+          ),
+          child: FutureBuilder(
+              future: initializeController(),
+              builder: (BuildContext context, AsyncSnapshot<void> snap) {
+                if (!snap.hasData) {
+                  // Just return a placeholder widget, here it's nothing but you have to return something to avoid errors
+                  return Column(
+                    children: [
+                      ButtonSkip(
+                          pageController: pageController, widget: widget),
+                    ],
+                  );
+                }
+                // ButtonSkip(pageController: pageController, widget: widget),
+                return Column(
+                  children: [
+                    Expanded(
+                      child: PageView.builder(
+                        itemBuilder: (context, index) => OnBoardingPage(
+                          image: widget.images[index],
+                          title: widget.titles[index],
+                        ),
+                        controller: pageController,
+                        itemCount: widget.titles.length,
+                        onPageChanged: (int index) {
+                          setState(() {
+                            index == (widget.titles.length - 1)
+                                ? onLastPage = false
+                                : onLastPage = true;
+                          });
+                        },
+                      ),
+                    ),
+                    DotOrButtonVisibility(
+                        onLastPage: onLastPage,
+                        pageController: pageController,
+                        widget: widget),
+                  ],
+                );
+              }),
+        ));
   }
 }
