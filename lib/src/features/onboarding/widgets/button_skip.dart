@@ -47,15 +47,15 @@ class ButtonSkip extends StatelessWidget {
             onTap: () {
               pageController.jumpToPage(widget.titles.length - 1);
             },
-            child: pageController.page == 0
-                ? text
-                : pageController.page == (widget.titles.length - 1)
-                    ? BorderedText(
-                        strokeWidth: 5.0,
-                        strokeColor: AppColors.textSkipShadow,
-                        child: text,
-                      )
-                    : text,
+            // child: pageController.page == 0
+            // ? text
+            child: pageController.page == (widget.titles.length - 1)
+                ? BorderedText(
+                    strokeWidth: 5.0,
+                    strokeColor: AppColors.textSkipShadow,
+                    child: text,
+                  )
+                : text,
           ),
         ),
       ],

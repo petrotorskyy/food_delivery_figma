@@ -22,7 +22,10 @@ class LogoOnboarding extends StatelessWidget {
         Align(
           alignment: Alignment.center,
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+            padding: const EdgeInsets.symmetric(
+              vertical: 15,
+              horizontal: 15,
+            ),
             child: Image.asset(
               AppPng.logo,
               height: AppDimensions.logoHeight,
