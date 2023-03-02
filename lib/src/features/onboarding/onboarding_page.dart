@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/src/core/common_widgets/widgets.dart';
 import 'package:food_delivery/src/core/constants/const.dart';
-
-import 'widgets/widgets.dart';
 
 class OnBoardingPage extends StatelessWidget {
   final dynamic image;
@@ -18,7 +17,8 @@ class OnBoardingPage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const LogoOnboarding(),
+          const LogoSvg(height: 90, width: 123),
+          //const LogoOnboarding(),
           const SizedBox(
             height: 5,
           ),

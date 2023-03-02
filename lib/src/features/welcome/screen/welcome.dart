@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../core/common_widgets/widgets.dart';
 import '../../../core/constants/const.dart';
@@ -38,10 +37,9 @@ class Welcome extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              svg = Padding(
-                padding: const EdgeInsets.symmetric(vertical: 35),
-                child: SvgPicture.asset(
-                  AppSvg.logo,
+              svg = const Padding(
+                padding: EdgeInsets.symmetric(vertical: 35),
+                child: LogoSvg(
                   height: 133,
                   width: 159,
                 ),
