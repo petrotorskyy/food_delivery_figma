@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../core/common_widgets/widgets.dart';
 import '../../../core/constants/const.dart';
-import '../../../core/common_widgets/buttons/button.dart';
 import '../../feature_widgets.dart';
 
 class Welcome extends StatelessWidget {
@@ -12,23 +12,6 @@ class Welcome extends StatelessWidget {
   Widget build(BuildContext context) {
     final Widget svg;
 
-    var text = Text(
-      AppString.skip.toUpperCase(),
-      style: const TextStyle(
-        fontFamily: AppFonts.fontTextSkip,
-        fontStyle: FontStyle.normal,
-        fontWeight: FontWeight.w800,
-        fontSize: AppDimensions.skipSize,
-        color: AppColors.textSkipColor,
-        shadows: [
-          Shadow(
-            color: AppColors.textSkipShadow,
-            offset: Offset(3, 3),
-            blurRadius: 15,
-          ),
-        ],
-      ),
-    );
     return Scaffold(
       extendBodyBehindAppBar: true,
       backgroundColor: AppColors.onBoardingBg,
@@ -47,7 +30,7 @@ class Welcome extends StatelessWidget {
                   onTap: () {
                     // pageController.jumpToPage(widget.titles.length - 1);
                   },
-                  child: text,
+                  child: const TextSkip(),
                 ),
               ),
             ],

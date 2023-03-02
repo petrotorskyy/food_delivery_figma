@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:bordered_text/bordered_text.dart';
 import 'package:flutter/material.dart';
+import 'package:food_delivery/src/core/common_widgets/text/text_skip.dart';
 
 import '../../../core/constants/const.dart';
 import '../../feature_widgets.dart';
@@ -55,7 +56,7 @@ class ButtonSkip extends StatelessWidget {
                     strokeColor: AppColors.textSkipShadow,
                     child: text,
                   )
-                : text,
+                : const TextSkip(),
           ),
         ),
       ],
