@@ -8,4 +8,8 @@ abstract class AppSvg {
   //Welcome
   static const String locateSvg = 'assets/welcome/svg/locate.svg';
   static const String provideSvg = 'assets/welcome/svg/provide.svg';
+
+  //Sign in
+  static const String iconFacebookSvg = 'assets/auth/facebook-white.svg';
+  static const String iconGoogleSvg = 'assets/auth/google-color-icon.svg';
 }

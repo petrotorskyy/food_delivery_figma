@@ -85,19 +85,22 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               Column(
                 children: [
-                  ElevatedButton(
-                    child: const Text('Login'),
-                    onPressed: () {
-                      print(nameController.text);
-                      print(passwordController.text);
-                    },
+                  ButtonSocial(
+                    onPress: loginWithFacebook,
+                    icon: AppSvg.iconFacebookSvg,
+                    text: AppString.buttonTextFacebook,
+                    buttonColor: Colors.blue,
+                    textColor: Colors.white,
                   ),
-                  ElevatedButton(
-                    child: const Text('Login'),
-                    onPressed: () {
-                      print(nameController.text);
-                      print(passwordController.text);
-                    },
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  ButtonSocial(
+                    onPress: loginWithGoogle,
+                    icon: AppSvg.iconGoogleSvg,
+                    text: AppString.buttonTextGoogle,
+                    buttonColor: Colors.white,
+                    textColor: Colors.black,
                   ),
                 ],
               ),
@@ -107,4 +110,8 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
     );
   }
+
+  void loginWithFacebook() {}
+
+  void loginWithGoogle() {}
 }

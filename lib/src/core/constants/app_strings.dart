@@ -23,4 +23,6 @@ abstract class AppString {
   static const String labelTextLogin = 'Username, Mobile, Number';
   static const String labelTextPassword = 'Password';
   static const String forgotPasswordText = 'Forgot password';
+  static const String buttonTextFacebook = 'Log In with Facebook';
+  static const String buttonTextGoogle = 'Log In with Google';
 }
