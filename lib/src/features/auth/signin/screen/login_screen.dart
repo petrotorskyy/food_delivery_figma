@@ -31,7 +31,9 @@ class _LoginScreenState extends State<LoginScreen> {
           Container(
             padding: const EdgeInsets.all(10),
             child: TextFiledAuth(
-                Controller: nameController, text: AppString.labelTextLogin),
+              Controller: nameController,
+              text: AppString.labelTextLogin,
+            ),
           ),
           Container(
             padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
