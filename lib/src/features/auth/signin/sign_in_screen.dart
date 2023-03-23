@@ -18,7 +18,7 @@ class SignInScreen extends StatelessWidget {
           elevation: 0,
           backgroundColor: const Color(0xFFF2F2F2),
           bottom: PreferredSize(
-            preferredSize: const Size(100, 180),
+            preferredSize: const Size(100, 200),
             child: Container(
               height: MediaQuery.of(context).size.height * 0.3,
               width: double.maxFinite,
@@ -28,47 +28,53 @@ class SignInScreen extends StatelessWidget {
                 ),
                 color: AppColors.signInHeaderColor,
               ), //400,
-              child: Column(
-                children: [
-                  const LogoSvg(height: 190, width: 100),
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                        top: 5,
-                      ),
-                      child: TabBar(
-                        tabs: [
-                          Tab(
-                            child: Text(
-                              AppString.login,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .displayMedium!
-                                  .copyWith(color: Colors.black),
-                            ),
-                          ),
-                          Tab(
-                            child: Text(
-                              AppString.signUp,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .displayMedium!
-                                  .copyWith(color: Colors.black),
-                            ),
-                          ),
-                        ],
-                        indicator: const UnderlineTabIndicator(
-                          borderSide: BorderSide(
-                            width: 3,
-                            color: AppColors.colorIndicatorSignIn,
-                          ),
-                          insets: EdgeInsets.symmetric(horizontal: 80.0),
+              child: SafeArea(
+                child: Column(
+                  children: [
+                    const LogoSvg(
+                      height: 200,
+                      width: 100,
+                      svgIcon: AppSvg.logoSvg,
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.only(
+                          top: 5,
                         ),
-                        indicatorSize: TabBarIndicatorSize.label,
+                        child: TabBar(
+                          tabs: [
+                            Tab(
+                              child: Text(
+                                AppString.login,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .displayMedium!
+                                    .copyWith(color: Colors.black),
+                              ),
+                            ),
+                            Tab(
+                              child: Text(
+                                AppString.signUp,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .displayMedium!
+                                    .copyWith(color: Colors.black),
+                              ),
+                            ),
+                          ],
+                          indicator: const UnderlineTabIndicator(
+                            borderSide: BorderSide(
+                              width: 3,
+                              color: AppColors.colorIndicatorSignIn,
+                            ),
+                            insets: EdgeInsets.symmetric(horizontal: 80.0),
+                          ),
+                          indicatorSize: TabBarIndicatorSize.label,
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),

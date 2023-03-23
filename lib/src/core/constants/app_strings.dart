@@ -26,4 +26,13 @@ abstract class AppString {
   static const String buttonTextFacebook = 'Log In with Facebook';
   static const String buttonTextGoogle = 'Log In with Google';
   static const String textOr = 'Or';
+
+  //Sign-up
+  static const String textRegister = 'Register';
+  static const String textFullName = 'Full Name';
+  static const String textMobileNumber = 'Mobile Number';
+  static const String textPasswordSignUp = 'Password';
+  static const String textConfirmPasswordSignUp = 'Confirm Password';
+  static const String textAlreadySignUp = 'Already a ';
+  static const String textMemberSignUp = 'Member?  ';
 }

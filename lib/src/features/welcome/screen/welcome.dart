@@ -40,6 +40,7 @@ class Welcome extends StatelessWidget {
               svg = const Padding(
                 padding: EdgeInsets.symmetric(vertical: 35),
                 child: LogoSvg(
+                  svgIcon: AppSvg.logo,
                   height: 133,
                   width: 159,
                 ),

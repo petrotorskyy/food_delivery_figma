@@ -17,7 +17,11 @@ class OnBoardingPage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const LogoSvg(height: 90, width: 123),
+          const LogoSvg(
+            height: 90,
+            width: 123,
+            svgIcon: AppSvg.logo,
+          ),
           //const LogoOnboarding(),
           const SizedBox(
             height: 5,

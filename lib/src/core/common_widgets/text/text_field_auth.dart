@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class TextFiledAuth extends StatelessWidget {
-  const TextFiledAuth({
+class TextFieldAuth extends StatelessWidget {
+  const TextFieldAuth({
     super.key,
     required this.controller,
     required this.text,

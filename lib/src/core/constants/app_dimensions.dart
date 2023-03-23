@@ -1,4 +1,8 @@
 abstract class AppDimensions {
+//Buttons
+  static const double buttonWidth = 314;
+  static const double buttonHeight = 63;
+
 //Splash Screen
   static const double fontHeight = 12;
 
@@ -41,4 +45,8 @@ abstract class AppDimensions {
   static const double headerSignInHeight = 345;
   static const double loginSize = 18;
   static const double forgotPasswordSize = 14;
+
+  //SignUp
+  static const double textRegisterSize = 36;
+  static const double buttonSocialRegisterRadius = 15;
 }

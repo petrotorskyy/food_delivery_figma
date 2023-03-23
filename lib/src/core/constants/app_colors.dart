@@ -22,4 +22,11 @@ abstract class AppColors {
   static const Color colorIndicatorSignIn = Color(0xFFFa4a0c);
   static const Color loginTextColor = Color(0x00000000);
   static const Color forgotPasswordTextColor = Color(0xfffa4a0c);
+
+  //SignUp
+
+  static const Color buttonIconColor = Color(0xffffffff);
+  static const Color buttonTextSignUpColor = Color(0xffffffff);
+  static const Color signUpButtonBg = Color(0xFFF8774A);
+  static const Color alreadyMemberTextColor = Color(0xffB3B3B3);
 }

@@ -30,6 +30,11 @@ ThemeData theme() {
         fontSize: AppDimensions.titleWelcomeSize,
         color: AppColors.signInHeaderColor,
       ),
+      headlineMedium: const TextStyle(
+        fontFamily: AppFonts.fontNunito,
+        fontWeight: FontWeight.w700,
+        fontSize: AppDimensions.textRegisterSize,
+      ),
       titleSmall: const TextStyle(
         fontFamily: AppFonts.fontNunito,
         fontWeight: FontWeight.w600,

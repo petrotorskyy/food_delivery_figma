@@ -13,4 +13,8 @@ abstract class AppSvg {
   static const String iconFacebookSvg = 'assets/auth/facebook-white.svg';
   static const String iconGoogleSvg = 'assets/auth/google-color-icon.svg';
   static const String logoSvg = 'assets/logo/logo_svg.svg';
+
+  //SignUp
+
+  static const String iconFacebookOval = 'assets/auth/facebook.svg';
 }
