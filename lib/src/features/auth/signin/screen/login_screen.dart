@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/src/core/common_widgets/buttons/button_with_out_icon.dart';
 
 import '../../../../core/common_widgets/widgets.dart';
 import '../../../../core/constants/const.dart';
@@ -58,9 +59,8 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(
                 height: 5,
               ),
-              ButtonSocial(
+              ButtonWithOutIcon(
                 onPress: loginWithFacebook,
-                icon: "",
                 text: AppString.login,
                 buttonColor: AppColors.loginButtonBg,
                 textColor: Colors.white,

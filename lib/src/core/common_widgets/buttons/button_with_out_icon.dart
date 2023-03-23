@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../constants/const.dart';
 
-class ButtonSocial extends StatelessWidget {
+class ButtonWithOutIcon extends StatelessWidget {
   final VoidCallback onPress;
-  final String icon;
+
   final String text;
   final Color textColor;
   final Color buttonColor;
-  const ButtonSocial({
+  const ButtonWithOutIcon({
     super.key,
     required this.onPress,
-    required this.icon,
     required this.text,
     required this.textColor,
     required this.buttonColor,
@@ -20,19 +18,17 @@ class ButtonSocial extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Widget svg;
     return ElevatedButton(
       onPressed: () => onPress(),
       style: ElevatedButton.styleFrom(
-        // alignment: Alignment.centerLeft,
+        alignment: Alignment.centerLeft,
         backgroundColor: buttonColor,
         fixedSize: const Size(314, 63),
         shape: RoundedRectangleBorder(
           borderRadius:
               BorderRadius.circular(AppDimensions.buttonBorderCircular30),
         ),
-        padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
-        // padding: const EdgeInsets.symmetric(horizontal: 100),
+        padding: const EdgeInsets.symmetric(horizontal: 130),
         textStyle: const TextStyle(
           fontFamily: AppFonts.fontTextButtonOnboarding,
           fontSize: 30,
@@ -41,14 +37,6 @@ class ButtonSocial extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          svg = SvgPicture.asset(
-            icon,
-            height: 30,
-            width: 30,
-          ),
-          const SizedBox(
-            width: 10,
-          ),
           Text(
             text,
             style: TextStyle(
