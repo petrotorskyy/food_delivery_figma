@@ -16,12 +16,11 @@ class SignInScreen extends StatelessWidget {
         backgroundColor: const Color(0xFFF2F2F2),
         appBar: AppBar(
           elevation: 0,
-          backgroundColor:
-              const Color(0xFFF2F2F2), // AppColors.signInHeaderColor,
+          backgroundColor: const Color(0xFFF2F2F2),
           bottom: PreferredSize(
             preferredSize: const Size(100, 180),
             child: Container(
-              height: MediaQuery.of(context).size.height * 0.3, //300,
+              height: MediaQuery.of(context).size.height * 0.3,
               width: double.maxFinite,
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.all(
