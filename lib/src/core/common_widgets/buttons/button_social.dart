@@ -20,7 +20,7 @@ class ButtonSocial extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Widget svg1;
+    final Widget svg;
     return ElevatedButton(
       onPressed: () => onPress(),
       style: ElevatedButton.styleFrom(
@@ -30,7 +30,7 @@ class ButtonSocial extends StatelessWidget {
           borderRadius:
               BorderRadius.circular(AppDimensions.buttonBorderCircular30),
         ),
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 45, vertical: 20),
         textStyle: const TextStyle(
           fontFamily: AppFonts.fontTextButtonOnboarding,
           fontSize: 30,
@@ -39,7 +39,7 @@ class ButtonSocial extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          svg1 = SvgPicture.asset(
+          svg = SvgPicture.asset(
             icon,
             height: 30,
             width: 30,
