@@ -37,6 +37,7 @@ flutter:
     - assets/welcome/svg/
     - assets/splash/png/
     - assets/onboarding/png/
+    - assets/auth/
     
 
 
