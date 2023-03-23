@@ -30,7 +30,7 @@ class ButtonSocial extends StatelessWidget {
           borderRadius:
               BorderRadius.circular(AppDimensions.buttonBorderCircular30),
         ),
-        padding: const EdgeInsets.symmetric(horizontal: 45, vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
         textStyle: const TextStyle(
           fontFamily: AppFonts.fontTextButtonOnboarding,
           fontSize: 30,

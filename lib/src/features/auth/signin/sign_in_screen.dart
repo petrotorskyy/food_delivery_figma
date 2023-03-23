@@ -15,9 +15,11 @@ class SignInScreen extends StatelessWidget {
         extendBodyBehindAppBar: true,
         backgroundColor: const Color(0xFFF2F2F2),
         appBar: AppBar(
-          backgroundColor: AppColors.signInHeaderColor,
+          elevation: 0,
+          backgroundColor:
+              const Color(0xFFF2F2F2), // AppColors.signInHeaderColor,
           bottom: PreferredSize(
-            preferredSize: const Size(100, 202),
+            preferredSize: const Size(100, 180),
             child: Container(
               height: MediaQuery.of(context).size.height * 0.3, //300,
               width: double.maxFinite,
@@ -29,7 +31,7 @@ class SignInScreen extends StatelessWidget {
               ), //400,
               child: Column(
                 children: [
-                  const LogoSvg(height: 200, width: 100),
+                  const LogoSvg(height: 190, width: 100),
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.only(

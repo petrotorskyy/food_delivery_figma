@@ -25,4 +25,5 @@ abstract class AppString {
   static const String forgotPasswordText = 'Forgot password';
   static const String buttonTextFacebook = 'Log In with Facebook';
   static const String buttonTextGoogle = 'Log In with Google';
+  static const String textOr = 'Or';
 }
