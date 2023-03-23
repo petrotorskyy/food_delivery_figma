@@ -42,6 +42,17 @@ ThemeData theme() {
         fontSize: 18,
         color: Color.fromRGBO(255, 255, 255, 0.6),
       ),
+      displayMedium: const TextStyle(
+        fontFamily: AppFonts.fontPopins,
+        fontWeight: FontWeight.w600,
+        fontSize: AppDimensions.loginSize,
+        color: AppColors.loginTextColor,
+      ),
+      displaySmall: const TextStyle(
+        fontFamily: AppFonts.fontPopins,
+        fontSize: AppDimensions.forgotPasswordSize,
+        fontWeight: FontWeight.w600,
+      ),
     ),
   );
 }

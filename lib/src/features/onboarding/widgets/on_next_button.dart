@@ -40,6 +40,7 @@ class OnNextButton extends StatelessWidget {
     Navigator.pushReplacement(
         // context, MaterialPageRoute(builder: (context) => const SignInScreen()));
         context,
-        MaterialPageRoute(builder: (context) => const Welcome()));
+        MaterialPageRoute(builder: (context) => const SignInScreen()));
+    //MaterialPageRoute(builder: (context) => const Welcome()));
   }
 }

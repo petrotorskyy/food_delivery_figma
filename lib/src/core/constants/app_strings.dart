@@ -16,4 +16,11 @@ abstract class AppString {
   static const String locateMeButton = 'Locate Me';
   static const String provideDeliveryLocationButton =
       'Provide Delivery Location';
+
+  //Sinh-in
+  static const String login = 'Login';
+  static const String signUp = 'Sign-up';
+  static const String labelTextLogin = 'Username, Mobile, Number';
+  static const String labelTextPassword = 'Password';
+  static const String forgotPasswordText = 'Forgot password';
 }

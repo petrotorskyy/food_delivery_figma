@@ -17,4 +17,9 @@ abstract class AppColors {
 
   static const Color signInScreenBg = Color(0xFFF2F2F2);
   static const Color signInHeaderColor = Color(0xffffffff);
+  static const Color loginButtonBg = Color(0xFFF8774A);
+  static const Color textFieldColor = Color(0xFFA0A0A0);
+  static const Color colorIndicatorSignIn = Color(0xFFFa4a0c);
+  static const Color loginTextColor = Color(0x00000000);
+  static const Color forgotPasswordTextColor = Color(0xfffa4a0c);
 }

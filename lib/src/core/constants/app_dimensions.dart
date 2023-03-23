@@ -39,4 +39,6 @@ abstract class AppDimensions {
   //SignIn
   static const double headerSignInWidth = 414;
   static const double headerSignInHeight = 345;
+  static const double loginSize = 18;
+  static const double forgotPasswordSize = 14;
 }

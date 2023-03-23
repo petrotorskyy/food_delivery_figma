@@ -7,4 +7,5 @@ class AppFonts {
   static const String fontTextSkip = 'Nunito';
   static const String fontTextButtonOnboarding = 'Poppins';
   static const String fontNunito = 'Nunito';
+  static const String fontPopins = 'Popins';
 }

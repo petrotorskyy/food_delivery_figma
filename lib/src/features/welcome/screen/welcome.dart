@@ -68,7 +68,7 @@ class Welcome extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(
-                      left: 35,
+                      left: 50,
                     ),
                     child: Text(AppString.selLocationWelcome,
                         textAlign: TextAlign.left,
