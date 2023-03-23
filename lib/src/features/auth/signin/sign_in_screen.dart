@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/src/core/common_widgets/logo/logo_svg.dart';
-import 'package:food_delivery/src/features/auth/signin/screen/login_screen.dart';
 
 import '../../../core/constants/const.dart';
+import '../widgets.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});
@@ -77,7 +77,7 @@ class SignInScreen extends StatelessWidget {
         body: const TabBarView(
           children: [
             LoginScreen(),
-            Icon(Icons.directions_transit, size: 350),
+            SignUpScreen(),
           ],
         ),
       ),

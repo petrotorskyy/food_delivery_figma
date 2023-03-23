@@ -94,7 +94,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         textColor: Colors.white,
                       ),
                       const SizedBox(
-                        height: 5,
+                        height: 10,
                       ),
                       ButtonSocial(
                         onPress: loginWithGoogle,

@@ -25,7 +25,7 @@ class ButtonSocial extends StatelessWidget {
       onPressed: () => onPress(),
       style: ElevatedButton.styleFrom(
         backgroundColor: buttonColor,
-        fixedSize: const Size(314, 65),
+        fixedSize: const Size(314, 63),
         shape: RoundedRectangleBorder(
           borderRadius:
               BorderRadius.circular(AppDimensions.buttonBorderCircular30),
