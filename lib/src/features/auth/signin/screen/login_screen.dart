@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/src/core/constants/const.dart';
 
+import '../../../../core/common_widgets/widgets.dart';
+
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -28,37 +30,14 @@ class _LoginScreenState extends State<LoginScreen> {
         children: [
           Container(
             padding: const EdgeInsets.all(10),
-            child: TextField(
-              controller: nameController,
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(
-                  borderSide: BorderSide.none,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(10.0),
-                  ),
-                ),
-                labelText: AppString.labelTextLogin,
-                filled: true,
-                fillColor: Colors.white,
-              ),
-            ),
+            child: TextFiledAuth(
+                Controller: nameController, text: AppString.labelTextLogin),
           ),
           Container(
             padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
-            child: TextField(
-              obscureText: true,
-              controller: passwordController,
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(
-                  borderSide: BorderSide.none,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(10.0),
-                  ),
-                ),
-                labelText: AppString.labelTextPassword,
-                filled: true,
-                fillColor: Colors.white,
-              ),
+            child: TextFiledAuth(
+              Controller: passwordController,
+              text: AppString.labelTextPassword,
             ),
           ),
           Align(
