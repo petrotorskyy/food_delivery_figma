@@ -3,18 +3,18 @@ import 'package:flutter/material.dart';
 class TextFiledAuth extends StatelessWidget {
   const TextFiledAuth({
     super.key,
-    required this.Controller,
+    required this.controller,
     required this.text,
   });
 
-  final TextEditingController Controller;
+  final TextEditingController controller;
   final String text;
 
   @override
   Widget build(BuildContext context) {
     return TextField(
       obscureText: true,
-      controller: Controller,
+      controller: controller,
       decoration: InputDecoration(
         border: const OutlineInputBorder(
           borderSide: BorderSide.none,

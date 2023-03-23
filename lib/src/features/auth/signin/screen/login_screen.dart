@@ -31,14 +31,14 @@ class _LoginScreenState extends State<LoginScreen> {
           Container(
             padding: const EdgeInsets.all(10),
             child: TextFiledAuth(
-              Controller: nameController,
+              controller: nameController,
               text: AppString.labelTextLogin,
             ),
           ),
           Container(
             padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
             child: TextFiledAuth(
-              Controller: passwordController,
+              controller: passwordController,
               text: AppString.labelTextPassword,
             ),
           ),
