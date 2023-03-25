@@ -69,8 +69,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   text: AppString.login,
                   buttonColor: AppColors.loginButtonBg,
                   textColor: Colors.white,
-                  height: 63,
-                  width: 314,
+                  height: AppDimensions.textLoginScreenButtonHeight,
+                  width: AppDimensions.textLoginScreenButtonWidth,
                 ),
                 const SizedBox(
                   height: 10,

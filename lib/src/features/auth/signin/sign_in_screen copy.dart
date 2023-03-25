@@ -32,8 +32,8 @@ class SignInScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     const LogoSvg(
-                      height: 200,
-                      width: 100,
+                      height: 246,
+                      width: 300,
                       svgIcon: AppSvg.logoSvg,
                     ),
                     Expanded(

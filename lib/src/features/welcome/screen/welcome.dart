@@ -112,7 +112,7 @@ class Welcome extends StatelessWidget {
 
   locateMe(BuildContext context) {
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => const SignInScreen()));
+        context, MaterialPageRoute(builder: (context) => const AuthScreen()));
   }
 
   provideDeliveryLocation(BuildContext context) {}

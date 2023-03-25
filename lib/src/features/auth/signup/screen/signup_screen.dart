@@ -84,8 +84,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             text: AppString.signUp,
                             textColor: AppColors.buttonTextSignUpColor,
                             buttonColor: AppColors.signUpButtonBg,
-                            height: 63,
-                            width: 183,
+                            height: AppDimensions.textSignUpButtonHeight,
+                            width: AppDimensions.textSignUpButtonWidth,
                           ),
                           const SizedBox(
                             width: 40,

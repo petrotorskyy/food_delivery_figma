@@ -45,8 +45,12 @@ abstract class AppDimensions {
   static const double headerSignInHeight = 345;
   static const double loginSize = 18;
   static const double forgotPasswordSize = 14;
+  static const double textLoginScreenButtonHeight = 63;
+  static const double textLoginScreenButtonWidth = 314;
 
   //SignUp
   static const double textRegisterSize = 36;
   static const double buttonSocialRegisterRadius = 15;
+  static const double textSignUpButtonHeight = 63;
+  static const double textSignUpButtonWidth = 183;
 }
