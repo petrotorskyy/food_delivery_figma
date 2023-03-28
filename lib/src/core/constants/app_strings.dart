@@ -35,4 +35,12 @@ abstract class AppString {
   static const String textConfirmPasswordSignUp = 'Confirm Password';
   static const String textAlreadySignUp = 'Already a ';
   static const String textMemberSignUp = 'Member?  ';
+
+  //Forgot password screen
+  static const String forgotText = 'Forgot';
+  static const String textEnterYourEmail = 'Enter your email address';
+  static const String textSendM = '*';
+  static const String textSendMessage =
+      'We will send you a message to set or reset your new password';
+  static const String textSendCode = 'Send code';
 }

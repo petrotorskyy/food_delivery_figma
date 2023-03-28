@@ -8,4 +8,5 @@ class AppFonts {
   static const String fontTextButtonOnboarding = 'Poppins';
   static const String fontNunito = 'Nunito';
   static const String fontPopins = 'Popins';
+  static const String fontGilroy = 'Gilroy';
 }

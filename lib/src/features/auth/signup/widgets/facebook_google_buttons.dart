@@ -14,7 +14,7 @@ class FacebookGoogleButtons extends StatelessWidget {
         Text(
           AppString.textRegister,
           style: Theme.of(context).textTheme.headlineMedium!.copyWith(
-                color: AppColors.loginButtonBg,
+                color: AppColors.mainColor,
               ),
         ),
         const SizedBox(

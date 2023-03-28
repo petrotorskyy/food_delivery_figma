@@ -58,6 +58,21 @@ ThemeData theme() {
         fontSize: AppDimensions.forgotPasswordSize,
         fontWeight: FontWeight.w600,
       ),
+      bodySmall: const TextStyle(
+        fontFamily: AppFonts.fontGilroy,
+        fontSize: AppDimensions.font12,
+        fontWeight: FontWeight.w400,
+      ),
+      bodyMedium: const TextStyle(
+        fontFamily: AppFonts.fontGilroy,
+        fontSize: AppDimensions.font14, //AppDimensions.font24,
+        fontWeight: FontWeight.bold,
+      ),
+      bodyLarge: const TextStyle(
+        fontFamily: AppFonts.fontGilroy,
+        fontSize: AppDimensions.font24, //AppDimensions.font24,
+        fontWeight: FontWeight.bold,
+      ),
     ),
   );
 }

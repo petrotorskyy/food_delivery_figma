@@ -1,11 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery/src/core/common_widgets/logo/logo_svg.dart';
+import 'package:food_delivery/src/features/auth/widgets.dart';
 
+import '../../core/common_widgets/widgets.dart';
 import '../../core/constants/const.dart';
-import 'widgets.dart';
 
-class AuthScreen extends StatelessWidget {
+class AuthScreen extends StatefulWidget {
   const AuthScreen({super.key});
+
+  @override
+  State<AuthScreen> createState() => _AuthScreenState();
+}
+
+class _AuthScreenState extends State<AuthScreen> {
+  final _formLoginKey = GlobalKey<FormState>();
+
+  //final bool _isChecked = false;
+  bool _active = true;
+  TextEditingController nameController = TextEditingController();
+
+  TextEditingController passwordController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+
+  void _loginForgotChanged(bool newValue) {
+    setState(() {
+      _active = newValue;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -58,14 +78,30 @@ class AuthScreen extends StatelessWidget {
             indicatorSize: TabBarIndicatorSize.label,
           ),
         ), //AppBar
-        body: const TabBarView(
+        body: TabBarView(
           children: [
-            LoginScreen(),
-            SignUpScreen(),
+            _active
+                ? LoginScreen(
+                    active: _active,
+                    onChanged: _loginForgotChanged,
+                  )
+                : ForgotPasswordScreen(
+                    active: _active,
+                    onChanged: _loginForgotChanged,
+                  ),
+            const SignUpScreen(),
           ],
         ),
       ), //Scaffold
       //Removing Debug Banner
     );
   }
+
+  void loginWithFacebook() {}
+
+  void loginWithGoogle() {}
+
+  void onSendCode() {}
+
+  onLoginScreen(bool bool) {}
 }

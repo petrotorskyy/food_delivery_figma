@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 abstract class AppColors {
+  static const Color mainColor = Color(0xFFF8774A);
   //Splash Screen
   static const Color textLogoColor = Color(0xFFDA7200);
 
@@ -29,4 +30,8 @@ abstract class AppColors {
   static const Color buttonTextSignUpColor = Color(0xffffffff);
   static const Color signUpButtonBg = Color(0xFFF8774A);
   static const Color alreadyMemberTextColor = Color(0xffB3B3B3);
+
+  //Forgot Password Screen
+  static const Color colorGrey = Color(0xffB2B2B2);
+  static const Color colorArrowRight = mainColor;
 }

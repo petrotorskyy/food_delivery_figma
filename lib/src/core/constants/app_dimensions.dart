@@ -1,4 +1,9 @@
 abstract class AppDimensions {
+  static const double font12 = 12;
+  static const double font14 = 14;
+  static const double font16 = 16;
+  static const double font24 = 24;
+
 //Buttons
   static const double buttonWidth = 314;
   static const double buttonHeight = 63;

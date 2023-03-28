@@ -72,3 +72,12 @@ flutter:
           weight: 700
         - asset: assets/font/Poppins-Black.ttf
           weight: 900
+    - family: Gilroy-Bold
+      fonts:
+        - asset: assets/font/Gilroy-Regular.ttf
+          weight: 100
+        - asset: assets/font/Gilroy-Medium.ttf
+          weight: 400
+        - asset: assets/font/Gilroy-Bold.ttf
+          weight: 700
+              

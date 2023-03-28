@@ -20,7 +20,6 @@ class ButtonSocial extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Widget svg;
     return ElevatedButton(
       onPressed: () => onPress(),
       style: ElevatedButton.styleFrom(
@@ -41,7 +40,7 @@ class ButtonSocial extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          svg = SvgPicture.asset(
+          SvgPicture.asset(
             icon,
             height: 30,
             width: 30,

@@ -3,25 +3,25 @@ import 'package:flutter/material.dart';
 import '../../../../core/common_widgets/widgets.dart';
 import '../../../../core/constants/const.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class LoginScreen extends StatelessWidget {
+  LoginScreen({
+    super.key,
+    required this.active,
+    required this.onChanged,
+  });
 
-  @override
-  State<LoginScreen> createState() => _LoginScreenState();
-}
+  final bool active;
+  final ValueChanged<bool> onChanged;
 
-class _LoginScreenState extends State<LoginScreen> {
+  void _showForgotTap() {
+    onChanged(!active);
+  }
+
   final _formLoginKey = GlobalKey<FormState>();
   final bool _isChecked = false;
+  bool? isShow;
   TextEditingController nameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
-
-  @override
-  void dispose() {
-    nameController.clear();
-    passwordController.clear();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,7 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 10),
+                  padding: const EdgeInsets.only(top: 5),
                   child: TextFieldAuth(
                     controller: nameController,
                     text: AppString.labelTextLogin,
@@ -50,9 +50,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 Align(
                   alignment: Alignment.centerLeft,
                   child: TextButton(
-                    onPressed: () {
-                      //forgot password screen
-                    },
+                    onPressed: _showForgotTap,
                     child: Text(
                       AppString.forgotPasswordText,
                       style: Theme.of(context).textTheme.displaySmall!.copyWith(
