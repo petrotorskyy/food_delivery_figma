@@ -43,7 +43,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     children: [
                       const FacebookGoogleButtons(),
                       const SizedBox(
-                        height: 20,
+                        height: AppDimensions.height20,
                       ),
                       Column(
                         children: [
@@ -52,21 +52,21 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             text: AppString.textFullName,
                           ),
                           const SizedBox(
-                            height: 20,
+                            height: AppDimensions.height20,
                           ),
                           TextFieldAuth(
                             controller: mobileController,
                             text: AppString.textMobileNumber,
                           ),
                           const SizedBox(
-                            height: 20,
+                            height: AppDimensions.height20,
                           ),
                           TextFieldAuth(
                             controller: passwordController,
                             text: AppString.labelTextPassword,
                           ),
                           const SizedBox(
-                            height: 20,
+                            height: AppDimensions.height20,
                           ),
                           TextFieldAuth(
                             controller: confirmPasswordController,
@@ -75,7 +75,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         ],
                       ),
                       const SizedBox(
-                        height: 30,
+                        height: AppDimensions.height30,
                       ),
                       Row(
                         children: [
@@ -88,7 +88,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             width: AppDimensions.textSignUpButtonWidth,
                           ),
                           const SizedBox(
-                            width: 40,
+                            width: AppDimensions.width40,
                           ),
                           GestureDetector(
                             onTap: onMember,

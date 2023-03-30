@@ -4,6 +4,17 @@ abstract class AppDimensions {
   static const double font16 = 16;
   static const double font24 = 24;
 
+  //SizedBox
+  static const double height10 = 10;
+  static const double height15 = 15;
+  static const double height20 = 20;
+  static const double height30 = 30;
+  static const double width10 = 10;
+  static const double width15 = 15;
+  static const double width20 = 20;
+  static const double width30 = 30;
+  static const double width40 = 40;
+
 //Buttons
   static const double buttonWidth = 314;
   static const double buttonHeight = 63;
