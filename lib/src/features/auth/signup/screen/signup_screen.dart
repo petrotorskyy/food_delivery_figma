@@ -45,34 +45,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       const SizedBox(
                         height: AppDimensions.height20,
                       ),
-                      Column(
-                        children: [
-                          TextFieldAuth(
-                            controller: nameRegisterController,
-                            text: AppString.textFullName,
-                          ),
-                          const SizedBox(
-                            height: AppDimensions.height20,
-                          ),
-                          TextFieldAuth(
-                            controller: mobileController,
-                            text: AppString.textMobileNumber,
-                          ),
-                          const SizedBox(
-                            height: AppDimensions.height20,
-                          ),
-                          TextFieldAuth(
-                            controller: passwordController,
-                            text: AppString.labelTextPassword,
-                          ),
-                          const SizedBox(
-                            height: AppDimensions.height20,
-                          ),
-                          TextFieldAuth(
-                            controller: confirmPasswordController,
-                            text: AppString.textConfirmPasswordSignUp,
-                          ),
-                        ],
+                      RegisterFields(
+                        nameRegisterController: nameRegisterController,
+                        mobileController: mobileController,
+                        passwordController: passwordController,
+                        confirmPasswordController: confirmPasswordController,
                       ),
                       const SizedBox(
                         height: AppDimensions.height30,
