@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/src/features/auth/signin/widget/widgets.dart';
 
 import '../../../../core/common_widgets/widgets.dart';
 import '../../../../core/constants/const.dart';
@@ -62,7 +63,7 @@ class LoginScreen extends StatelessWidget {
                 const SizedBox(
                   height: AppDimensions.height15,
                 ),
-                ButtonWithOutIcon(
+                const ButtonWithOutIcon(
                   onPress: loginWithFacebook,
                   text: AppString.login,
                   buttonColor: AppColors.loginButtonBg,
@@ -88,28 +89,8 @@ class LoginScreen extends StatelessWidget {
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Column(
-                      children: [
-                        ButtonSocial(
-                          onPress: loginWithFacebook,
-                          icon: AppSvg.iconFacebookSvg,
-                          text: AppString.buttonTextFacebook,
-                          buttonColor: Colors.blue,
-                          textColor: Colors.white,
-                        ),
-                        const SizedBox(
-                          height: AppDimensions.height20,
-                        ),
-                        ButtonSocial(
-                          onPress: loginWithGoogle,
-                          icon: AppSvg.iconGoogleSvg,
-                          text: AppString.buttonTextGoogle,
-                          buttonColor: Colors.white,
-                          textColor: Colors.grey,
-                        ),
-                      ],
-                    ),
+                  children: const [
+                    SocialButtonsColumn(),
                   ],
                 ),
               ],
@@ -119,8 +100,4 @@ class LoginScreen extends StatelessWidget {
       ),
     );
   }
-
-  void loginWithFacebook() {}
-
-  void loginWithGoogle() {}
 }
