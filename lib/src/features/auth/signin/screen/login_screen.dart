@@ -41,7 +41,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: 15,
+                  height: AppDimensions.height15,
                 ),
                 TextFieldAuth(
                   controller: passwordController,
@@ -60,7 +60,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: 15,
+                  height: AppDimensions.height15,
                 ),
                 ButtonWithOutIcon(
                   onPress: loginWithFacebook,
@@ -71,7 +71,7 @@ class LoginScreen extends StatelessWidget {
                   width: AppDimensions.textLoginScreenButtonWidth,
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: AppDimensions.height10,
                 ),
                 Align(
                   alignment: Alignment.center,
@@ -84,7 +84,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: 25,
+                  height: AppDimensions.height20,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -99,7 +99,7 @@ class LoginScreen extends StatelessWidget {
                           textColor: Colors.white,
                         ),
                         const SizedBox(
-                          height: 20,
+                          height: AppDimensions.height20,
                         ),
                         ButtonSocial(
                           onPress: loginWithGoogle,
