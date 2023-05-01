@@ -53,7 +53,7 @@ class AppRouter {
         ),
       ],
       errorPageBuilder: (context, state) {
-        return const MaterialPage(child: ErrorPage());
+        return const MaterialPage(child: ErrorScreen());
       },
       // redirect: (context, state) {
       //   if (!isAuth &&
