@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/src/core/validators/form_validator.dart';
 
 import '../../../../core/common_widgets/widgets.dart';
 import '../../../../core/constants/const.dart';
@@ -36,6 +37,7 @@ class SignInForm extends StatelessWidget {
                   TextFieldAuth(
                     controller: nameController,
                     text: AppString.labelTextLogin,
+                    validate: FormValidator().validateName,
                   ),
                   const SizedBox(
                     height: AppDimensions.height20,
@@ -43,6 +45,7 @@ class SignInForm extends StatelessWidget {
                   TextFieldAuth(
                     controller: passwordController,
                     text: AppString.labelTextPassword,
+                    validate: FormValidator().validatePassword,
                   ),
                   Align(
                     alignment: Alignment.centerLeft,
