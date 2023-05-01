@@ -43,4 +43,16 @@ abstract class AppString {
   static const String textSendMessage =
       'We will send you a message to set or reset your new password';
   static const String textSendCode = 'Send code';
+
+  //Form Validator
+  static const String nameRequired = 'Name is required';
+  static const String errorNameRequired = 'Name must be a-z and A-Z';
+  static const String mobileNumberRequired = 'Mobile phone number is required';
+  static const String errorMobileNumberRequired =
+      'Mobile phone number must contain only digits';
+  static const String errorPasswordRequired =
+      'Password must be more than 5 characters';
+  static const String errorValidEmail = 'Enter Valid Email';
+  static const String errorPasswordMatch = 'Password doesn\'t match';
+  static const String passwordConfirmRequired = 'Confirm password is required';
 }
