@@ -81,7 +81,7 @@ class _AuthScreenState extends State<AuthScreen> {
         body: TabBarView(
           children: [
             _active
-                ? LoginScreen(
+                ? SignInScreen(
                     active: _active,
                     onChanged: _loginForgotChanged,
                   )
