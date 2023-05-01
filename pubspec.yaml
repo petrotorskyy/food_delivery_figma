@@ -15,6 +15,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_svg: ^2.0.2
+  go_router: ^6.5.6
   smooth_page_indicator: ^1.0.0+2
 
 dev_dependencies:
@@ -38,8 +39,6 @@ flutter:
     - assets/splash/png/
     - assets/onboarding/png/
     - assets/auth/
-    
-
 
   fonts:
     - family: Metropolis
@@ -80,4 +79,3 @@ flutter:
           weight: 400
         - asset: assets/font/Gilroy-Bold.ttf
           weight: 700
-              

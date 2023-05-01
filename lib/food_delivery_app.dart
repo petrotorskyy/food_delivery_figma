@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'src/core/routing/app_router_config.dart';
 import 'src/core/utils/theme/theme.dart';
-import 'src/features/feature_widgets.dart';
 
 class FoodDeliveryApp extends StatelessWidget {
   const FoodDeliveryApp({super.key});
@@ -9,13 +9,13 @@ class FoodDeliveryApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'Food Delivery App',
       theme: theme(),
-      home: //const SignInScreen()
-          const SplashScreen(),
-      //const Welcome(),
+      routeInformationParser:
+          AppRouter.returnRouter(false).routeInformationParser,
+      routerDelegate: AppRouter.returnRouter(false).routerDelegate,
     );
   }
 }

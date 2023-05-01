@@ -44,7 +44,6 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
-      //backgroundColor: AppColors.onBoardingBg,
       body: Container(
         width: double.maxFinite,
         height: double.maxFinite,

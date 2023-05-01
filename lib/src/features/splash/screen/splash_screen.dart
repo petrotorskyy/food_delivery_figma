@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../core/constants/const.dart';
-import '../../feature_widgets.dart';
-import '../../onboarding/data/data.dart';
+import '../../../core/routing/app_route_constants.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -31,14 +31,15 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(
       const Duration(seconds: 3),
       () {
-        Navigator.of(context).pushReplacement(
-          MaterialPageRoute(
-            builder: (context) => OnBoardingScreen(
-              images: imageList,
-              titles: titlesList,
-            ),
-          ),
-        );
+        // Navigator.of(context).pushReplacement(
+        //   MaterialPageRoute(
+        //     builder: (context) => OnBoardingScreen(
+        //       images: imageList,
+        //       titles: titlesList,
+        //     ),
+        //   ),
+        // );
+        GoRouter.of(context).pushNamed(AppRouteConstants.onboardingRouteName);
       },
     );
   }
@@ -80,7 +81,7 @@ class _SplashScreenState extends State<SplashScreen> {
                         top: 220,
                         child: Text(
                           AppString.textSplash,
-                          style: Theme.of(context).textTheme.headline5,
+                          style: Theme.of(context).textTheme.headlineSmall,
                         ),
                       ),
                       Positioned(

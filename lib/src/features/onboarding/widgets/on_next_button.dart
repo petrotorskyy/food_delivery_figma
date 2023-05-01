@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../core/constants/const.dart';
-import '../../feature_widgets.dart';
+import '../../../core/routing/app_route_constants.dart';
 
 class OnNextButton extends StatelessWidget {
   const OnNextButton({
@@ -37,10 +38,11 @@ class OnNextButton extends StatelessWidget {
   }
 
   void onNextClick(BuildContext context) {
-    Navigator.pushReplacement(
-        // context, MaterialPageRoute(builder: (context) => const SignInScreen()));
-        context,
-        MaterialPageRoute(builder: (context) => const AuthScreen()));
-    //MaterialPageRoute(builder: (context) => const Welcome()));
+    // Navigator.pushReplacement(
+    //     // context, MaterialPageRoute(builder: (context) => const SignInScreen()));
+    //     context,
+    //     MaterialPageRoute(builder: (context) => const AuthScreen()));
+    // //MaterialPageRoute(builder: (context) => const Welcome()));
+    GoRouter.of(context).pushNamed(AppRouteConstants.authRouteName);
   }
 }
