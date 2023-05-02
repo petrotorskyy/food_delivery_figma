@@ -41,10 +41,10 @@ This project is a starting point for a Flutter application from Figma.
 <li>BLoC</li>
 </ul>
 
-### Screenshots
+#### Screenshots
 
 #### Splash Screen
-<img src="screenshots\splash_screen.png" alt="Splash Screen - Flutter Food Delivery from Figma" title="Splash Screen - Flutter Food Delivery from Figma" />
+<img src="screenshots\splash_screen.png" alt="Splash Screen - Flutter Food Delivery from Figma" title="Splash Screen - Flutter Food Delivery from Figma" height="420" width="297"/>
 
 #### OnBoarding Screen
 
