@@ -25,6 +25,7 @@ class RegisterFields extends StatelessWidget {
         TextFieldAuth(
           controller: nameRegisterController,
           text: AppString.textFullName,
+          obscureText: false,
           validate: FormValidator().validateName,
         ),
         const SizedBox(
@@ -33,6 +34,7 @@ class RegisterFields extends StatelessWidget {
         TextFieldAuth(
           controller: mobileController,
           text: AppString.textMobileNumber,
+          obscureText: false,
           validate: FormValidator().validateMobile,
         ),
         const SizedBox(
@@ -41,6 +43,7 @@ class RegisterFields extends StatelessWidget {
         TextFieldAuth(
           controller: passwordController,
           text: AppString.labelTextPassword,
+          obscureText: true,
           validate: FormValidator().validatePassword,
         ),
         const SizedBox(
@@ -49,6 +52,7 @@ class RegisterFields extends StatelessWidget {
         TextFieldAuth(
           controller: confirmPasswordController,
           text: AppString.textConfirmPasswordSignUp,
+          obscureText: true,
           validate: FormValidator().validatePassword,
         ),
       ],

@@ -8,16 +8,18 @@ class TextFieldAuth extends StatelessWidget {
     required this.controller,
     required this.text,
     required this.validate,
+    required this.obscureText,
   });
 
   final TextEditingController controller;
   final String text;
+  final bool obscureText;
   Function(String) validate;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      obscureText: true,
+      obscureText: obscureText,
       controller: controller,
       validator: FormValidator().validateName,
       decoration: InputDecoration(

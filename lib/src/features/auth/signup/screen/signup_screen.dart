@@ -84,7 +84,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
     );
   }
 
-  void onSignUp() {}
+  void onSignUp() {
+    if (_formRegisterKey.currentState!.validate()) {
+      print("good");
+    } else {
+      print("bad");
+    }
+  }
 
   void onMember() {}
 }

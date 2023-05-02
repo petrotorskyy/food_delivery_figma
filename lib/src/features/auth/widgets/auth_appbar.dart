@@ -20,7 +20,9 @@ class AuthAppBar extends StatelessWidget implements PreferredSizeWidget {
       toolbarHeight: height,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
-            bottomRight: Radius.circular(30), bottomLeft: Radius.circular(30)),
+          bottomRight: Radius.circular(30),
+          bottomLeft: Radius.circular(30),
+        ),
       ),
       title: const LogoSvg(
         height: 180,

@@ -38,6 +38,7 @@ class SignInForm extends StatelessWidget {
                 TextFieldAuth(
                   controller: nameController,
                   text: AppString.labelTextLogin,
+                  obscureText: false,
                   validate: FormValidator().validateName,
                 ),
                 const SizedBox(
@@ -46,6 +47,7 @@ class SignInForm extends StatelessWidget {
                 TextFieldAuth(
                   controller: passwordController,
                   text: AppString.labelTextPassword,
+                  obscureText: true,
                   validate: FormValidator().validatePassword,
                 ),
                 Align(
