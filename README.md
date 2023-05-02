@@ -29,7 +29,7 @@ This project is a starting point for a Flutter application from Figma.
 <li>flutter build apk --release</li>
 </ul>
 
-Generate split APK's
+<p>Generate split APK's</p>
 
 <ul>
 <li>flutter clean</li>
@@ -38,9 +38,9 @@ Generate split APK's
 
 ### iOS release steps 
 
-Set iOS deployment target
+<p>Set iOS deployment target</p>
 
-Follow below steps
+<p>Follow below steps</p>
 
 <ul>
 <li>setup flutter sdk</li>
@@ -49,13 +49,14 @@ Follow below steps
 <li>update version code in yaml</li>
 </ul>
 
-Bellow commands will generate the runner.app file
+<p>Bellow commands will generate the runner.app file</p>
+<ul>
+<li>flutter clean</li>
+<li>flutter build ios --release</li>
+</ul>
+<p>Now open the xcode run/build to check if project has error</p>
 
-flutter clean
-flutter build ios --release
-Now open the xcode run/build to check if project has error
-
-Select Product -> Archive Follow the uploading steps
+<p>Select Product -> Archive Follow the uploading steps</p>
 
 <p>Thanks for your love and support</p> 
 <h3>Glory to Ukraine!</h3>
