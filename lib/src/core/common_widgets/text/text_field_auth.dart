@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../validators/form_validator.dart';
-
 class TextFieldAuth extends StatelessWidget {
-  TextFieldAuth({
+  const TextFieldAuth({
     super.key,
     required this.controller,
     required this.text,
@@ -14,14 +12,14 @@ class TextFieldAuth extends StatelessWidget {
   final TextEditingController controller;
   final String text;
   final bool isPassword;
-  Function(String) validate;
-
+  //Function(String) validate;
+  final String? Function(String?)? validate;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       obscureText: isPassword ? true : false,
       controller: controller,
-      validator: FormValidator().validateName,
+      validator: validate,
       decoration: InputDecoration(
         border: const OutlineInputBorder(
           borderSide: BorderSide.none,

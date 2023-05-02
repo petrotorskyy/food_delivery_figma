@@ -25,6 +25,8 @@ class SignInForm extends StatelessWidget {
   TextEditingController passwordController = TextEditingController();
   bool? isShow;
 
+  FormValidator formValidator = FormValidator();
+
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -38,7 +40,7 @@ class SignInForm extends StatelessWidget {
                 TextFieldAuth(
                   controller: nameController,
                   text: AppString.labelTextLogin,
-                  validate: FormValidator().validateName,
+                  validate: formValidator.validateName,
                 ),
                 const SizedBox(
                   height: AppDimensions.height20,
@@ -47,7 +49,7 @@ class SignInForm extends StatelessWidget {
                   controller: passwordController,
                   text: AppString.labelTextPassword,
                   isPassword: true,
-                  validate: FormValidator().validatePassword,
+                  validate: formValidator.validatePassword,
                 ),
                 Align(
                   alignment: Alignment.centerLeft,

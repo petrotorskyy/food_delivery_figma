@@ -5,7 +5,7 @@ import '../../../../core/constants/const.dart';
 import '../../../../core/validators/form_validator.dart';
 
 class RegisterFields extends StatelessWidget {
-  const RegisterFields({
+  RegisterFields({
     super.key,
     required this.nameRegisterController,
     required this.mobileController,
@@ -18,6 +18,8 @@ class RegisterFields extends StatelessWidget {
   final TextEditingController passwordController;
   final TextEditingController confirmPasswordController;
 
+  FormValidator formValidator = FormValidator();
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -25,7 +27,7 @@ class RegisterFields extends StatelessWidget {
         TextFieldAuth(
           controller: nameRegisterController,
           text: AppString.textFullName,
-          validate: FormValidator().validateName,
+          validate: formValidator.validateName,
         ),
         const SizedBox(
           height: AppDimensions.height20,
@@ -33,7 +35,7 @@ class RegisterFields extends StatelessWidget {
         TextFieldAuth(
           controller: mobileController,
           text: AppString.textMobileNumber,
-          validate: FormValidator().validateMobile,
+          validate: formValidator.validateMobile,
         ),
         const SizedBox(
           height: AppDimensions.height20,
@@ -42,7 +44,7 @@ class RegisterFields extends StatelessWidget {
           controller: passwordController,
           text: AppString.labelTextPassword,
           isPassword: true,
-          validate: FormValidator().validatePassword,
+          validate: formValidator.validatePassword,
         ),
         const SizedBox(
           height: AppDimensions.height20,
@@ -51,7 +53,8 @@ class RegisterFields extends StatelessWidget {
           controller: confirmPasswordController,
           text: AppString.textConfirmPasswordSignUp,
           isPassword: true,
-          validate: FormValidator().validatePassword,
+          validate: (val) => formValidator.validateConfirmPassword(
+              val, passwordController.text),
         ),
       ],
     );
