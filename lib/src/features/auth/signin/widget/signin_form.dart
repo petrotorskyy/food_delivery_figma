@@ -31,50 +31,47 @@ class SignInForm extends StatelessWidget {
       key: _formLoginKey,
       child: Column(
         children: [
-          SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.only(top: 5),
-              child: Column(
-                children: [
-                  TextFieldAuth(
-                    controller: nameController,
-                    text: AppString.labelTextLogin,
-                    validate: FormValidator().validateName,
-                  ),
-                  const SizedBox(
-                    height: AppDimensions.height20,
-                  ),
-                  TextFieldAuth(
-                    controller: passwordController,
-                    text: AppString.labelTextPassword,
-                    validate: FormValidator().validatePassword,
-                  ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: TextButton(
-                      onPressed: _showForgotTap,
-                      child: Text(
-                        AppString.forgotPasswordText,
-                        style:
-                            Theme.of(context).textTheme.displaySmall!.copyWith(
-                                  color: AppColors.forgotPasswordTextColor,
-                                ),
-                      ),
+          Padding(
+            padding: const EdgeInsets.only(top: 5),
+            child: Column(
+              children: [
+                TextFieldAuth(
+                  controller: nameController,
+                  text: AppString.labelTextLogin,
+                  validate: FormValidator().validateName,
+                ),
+                const SizedBox(
+                  height: AppDimensions.height20,
+                ),
+                TextFieldAuth(
+                  controller: passwordController,
+                  text: AppString.labelTextPassword,
+                  validate: FormValidator().validatePassword,
+                ),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: TextButton(
+                    onPressed: _showForgotTap,
+                    child: Text(
+                      AppString.forgotPasswordText,
+                      style: Theme.of(context).textTheme.displaySmall!.copyWith(
+                            color: AppColors.forgotPasswordTextColor,
+                          ),
                     ),
                   ),
-                  const SizedBox(
-                    height: AppDimensions.height15,
-                  ),
-                  ButtonWithOutIcon(
-                    onPress: () => loginWithFirebase(context),
-                    text: AppString.login,
-                    buttonColor: AppColors.loginButtonBg,
-                    textColor: Colors.white,
-                    height: AppDimensions.textLoginScreenButtonHeight,
-                    width: AppDimensions.textLoginScreenButtonWidth,
-                  ),
-                ],
-              ),
+                ),
+                const SizedBox(
+                  height: AppDimensions.height15,
+                ),
+                ButtonWithOutIcon(
+                  onPress: () => loginWithFirebase(context),
+                  text: AppString.login,
+                  buttonColor: AppColors.loginButtonBg,
+                  textColor: Colors.white,
+                  height: AppDimensions.textLoginScreenButtonHeight,
+                  width: AppDimensions.textLoginScreenButtonWidth,
+                ),
+              ],
             ),
           ),
         ],

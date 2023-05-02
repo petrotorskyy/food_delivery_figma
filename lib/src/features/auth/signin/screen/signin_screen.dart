@@ -46,9 +46,11 @@ class _SignInScreenState extends State<SignInScreen> {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            SignInForm(
-              active: widget.active,
-              onChanged: _showForgotTap,
+            SafeArea(
+              child: SignInForm(
+                active: widget.active,
+                onChanged: _showForgotTap,
+              ),
             ),
             const SizedBox(
               height: AppDimensions.height10,
