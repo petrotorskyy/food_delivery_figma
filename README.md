@@ -47,7 +47,7 @@ This project is a starting point for a Flutter application from Figma.
 <img src="screenshots\splash_screen.png" alt="Splash Screen - Flutter Food Delivery from Figma" title="Splash Screen - Flutter Food Delivery from Figma" height="700" width="320"/>
 
 #### OnBoarding Screen
-<table><tr>
+<table border="0"><tr>
 <td>
 <img src="screenshots\onBoarding_first.png" alt="onBoarding Screen - Flutter Food Delivery from Figma" title="onBoarding Screen - Flutter Food Delivery from Figma" height="700" width="320"/>
 </td>
@@ -62,13 +62,18 @@ This project is a starting point for a Flutter application from Figma.
 
 </tr>
 </table>
+
 #### Welcome Screen
+<img src="screenshots\welcome.png" alt="Welcome Screen - Flutter Food Delivery from Figma" title="Welcome Screen - Flutter Food Delivery from Figma" height="700" width="320"/>
 
 #### SignIn Screen
+<img src="screenshots\sign_in.png" alt="SignIn Screen - Flutter Food Delivery from Figma" title="SignIn Screen - Flutter Food Delivery from Figma" height="700" width="320"/>
 
 #### SignUp Screen
+<img src="screenshots\sign_up.png" alt="SignUp Screen - Flutter Food Delivery from Figma" title="SignUp Screen - Flutter Food Delivery from Figma" height="700" width="320"/>
 
 #### ForgotPassword Screen
+<img src="screenshots\forgot_password.png" alt="Forgot Password Screen - Flutter Food Delivery from Figma" title="Forgot Password Screen - Flutter Food Delivery from Figma" height="700" width="320"/>
 
 ## To Generate Android release steps:
 
