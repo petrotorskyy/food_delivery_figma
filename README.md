@@ -12,15 +12,29 @@ This project is a starting point for a Flutter application from Figma.
 <a href="https://www.youtube.com/watch?v=kJ9HZ4A4FXw&t=1272s" title="Flutter Food Delivery Application">My development progress - Watch it on YouTube</a>
 
 ## Features:
-<ul><li>Splash</li>
+<ul>
+<li>Splash</li>
 <li>Onboarding</li>
 <li>Welcome</li>
 <li>Login</li>
 <li>Forgot Password</li>
 <li>Sign Up</li>
-
 </ul>
 
+## Technologies & Architecture
+<p>Flutter, Dart</p>
+
+### Firebase
+<ul>
+<li>Authentication</li>
+<li>Firestore</li>
+<li>Storage</li>
+</ul>
+
+### Architecture components
+<ul>
+<li>BLoC</li>
+</ul>
 ## To Generate Android release steps:
 
 ### Generate FAT APK
