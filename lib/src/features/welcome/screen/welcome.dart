@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/src/features/welcome/widgets/welcome_block.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../core/common_widgets/widgets.dart';
@@ -37,34 +38,35 @@ class Welcome extends StatelessWidget {
               ),
             ],
           ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              svg = const Padding(
-                padding: EdgeInsets.symmetric(vertical: 35),
-                child: LogoSvg(
-                  svgIcon: AppSvg.logo,
-                  height: 133,
-                  width: 159,
-                ),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              Text(AppString.titleWelcome,
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.titleLarge),
-              const SizedBox(
-                height: 15,
-              ),
-              Text(AppString.subTitleWelcome,
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.titleSmall),
-              const SizedBox(
-                height: 55,
-              ),
-            ],
-          ),
+          const WelcomeBlock(),
+          // Column(
+          //   mainAxisAlignment: MainAxisAlignment.center,
+          //   children: [
+          //     svg = const Padding(
+          //       padding: EdgeInsets.symmetric(vertical: 35),
+          //       child: LogoSvg(
+          //         svgIcon: AppSvg.logo,
+          //         height: 133,
+          //         width: 159,
+          //       ),
+          //     ),
+          //     const SizedBox(
+          //       height: 10,
+          //     ),
+          //     Text(AppString.titleWelcome,
+          //         textAlign: TextAlign.center,
+          //         style: Theme.of(context).textTheme.titleLarge),
+          //     const SizedBox(
+          //       height: 15,
+          //     ),
+          //     Text(AppString.subTitleWelcome,
+          //         textAlign: TextAlign.center,
+          //         style: Theme.of(context).textTheme.titleSmall),
+          //     const SizedBox(
+          //       height: 55,
+          //     ),
+          //   ],
+          // ),
           Row(
             children: [
               Column(
