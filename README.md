@@ -54,8 +54,7 @@ This project is a starting point for a Flutter application from Figma.
 <td>
 <img src="screenshots\onBoarding_second.png" alt="onBoarding Screen - Flutter Food Delivery from Figma" title="onBoarding Screen - Flutter Food Delivery from Figma" height="700" width="320"/>
 </td>
-</tr>
-<tr>
+
 <td>
 <img src="screenshots\onBoarding_last.png" alt="onBoarding Screen - Flutter Food Delivery from Figma" title="onBoarding Screen - Flutter Food Delivery from Figma" height="700" width="320"/>
 </td>
