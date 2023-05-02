@@ -2,8 +2,10 @@
 import 'package:bordered_text/bordered_text.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery/src/core/common_widgets/text/text_skip.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../core/constants/const.dart';
+import '../../../core/routing/app_route_constants.dart';
 import '../../feature_widgets.dart';
 
 class ButtonSkip extends StatelessWidget {
@@ -46,7 +48,8 @@ class ButtonSkip extends StatelessWidget {
           ),
           child: InkWell(
             onTap: () {
-              pageController.jumpToPage(widget.titles.length - 1);
+              //pageController.jumpToPage(widget.titles.length - 1);
+              GoRouter.of(context).pushNamed(AppRouteConstants.homeRouteName);
             },
             // child: pageController.page == 0
             // ? text
