@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/src/core/validators/form_validator.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../core/common_widgets/widgets.dart';
 import '../../../../core/constants/const.dart';
+import '../../../../core/routing/app_route_constants.dart';
 
 class SignInForm extends StatelessWidget {
   SignInForm({
@@ -64,7 +66,7 @@ class SignInForm extends StatelessWidget {
                     height: AppDimensions.height15,
                   ),
                   ButtonWithOutIcon(
-                    onPress: loginWithFacebook,
+                    onPress: () => loginWithFirebase(context),
                     text: AppString.login,
                     buttonColor: AppColors.loginButtonBg,
                     textColor: Colors.white,
@@ -80,5 +82,7 @@ class SignInForm extends StatelessWidget {
     );
   }
 
-  void loginWithFacebook() {}
+  void loginWithFirebase(BuildContext context) {
+    GoRouter.of(context).pushNamed(AppRouteConstants.welcomeRouteName);
+  }
 }

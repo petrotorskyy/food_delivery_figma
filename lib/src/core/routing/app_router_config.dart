@@ -51,6 +51,15 @@ class AppRouter {
             );
           },
         ),
+        GoRoute(
+          name: AppRouteConstants.welcomeRouteName,
+          path: '/welcome',
+          pageBuilder: (context, state) {
+            return const MaterialPage(
+              child: Welcome(),
+            );
+          },
+        ),
       ],
       errorPageBuilder: (context, state) {
         return const MaterialPage(child: ErrorScreen());

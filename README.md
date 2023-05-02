@@ -41,6 +41,20 @@ This project is a starting point for a Flutter application from Figma.
 <li>BLoC</li>
 </ul>
 
+### Screenshots
+
+#### Splash Screen
+
+#### OnBoarding Screen
+
+#### Welcome Screen
+
+#### SignIn Screen
+
+#### SignUp Screen
+
+#### ForgotPassword Screen
+
 ## To Generate Android release steps:
 
 ### Generate FAT APK
