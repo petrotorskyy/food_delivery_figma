@@ -31,6 +31,11 @@ This project is a starting point for a Flutter application from Figma.
 <li>Storage</li>
 </ul>
 
+### Navigation
+<ul>
+<li>GoRouter</li>
+</ul>
+
 ### Architecture components
 <ul>
 <li>BLoC</li>
