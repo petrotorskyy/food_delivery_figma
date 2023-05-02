@@ -6,7 +6,7 @@ import '../../../../core/common_widgets/widgets.dart';
 import '../../../../core/constants/const.dart';
 import '../../../../core/routing/app_route_constants.dart';
 
-class SignInForm extends StatelessWidget {
+class SignInForm extends StatefulWidget {
   SignInForm({
     super.key,
     required this.active,
@@ -16,13 +16,21 @@ class SignInForm extends StatelessWidget {
   bool active;
   final ValueChanged<bool> onChanged;
 
+  @override
+  State<SignInForm> createState() => _SignInFormState();
+}
+
+class _SignInFormState extends State<SignInForm> {
   void _showForgotTap() {
-    onChanged(!active);
+    widget.onChanged(!widget.active);
   }
 
-  final _formLoginKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> _formLoginKey = GlobalKey<FormState>();
+
   TextEditingController nameController = TextEditingController();
+
   TextEditingController passwordController = TextEditingController();
+
   bool? isShow;
 
   FormValidator formValidator = FormValidator();
@@ -83,6 +91,8 @@ class SignInForm extends StatelessWidget {
   }
 
   void loginWithFirebase(BuildContext context) {
-    GoRouter.of(context).pushNamed(AppRouteConstants.welcomeRouteName);
+    if (_formLoginKey.currentState!.validate()) {
+      GoRouter.of(context).pushNamed(AppRouteConstants.welcomeRouteName);
+    }
   }
 }
