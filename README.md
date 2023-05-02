@@ -35,6 +35,7 @@ This project is a starting point for a Flutter application from Figma.
 <ul>
 <li>BLoC</li>
 </ul>
+
 ## To Generate Android release steps:
 
 ### Generate FAT APK
