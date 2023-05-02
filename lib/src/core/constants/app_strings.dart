@@ -44,7 +44,10 @@ abstract class AppString {
       'We will send you a message to set or reset your new password';
   static const String textSendCode = 'Send code';
 
-  //Form Validator
+  // Home Screen
+  static const String homeAppScreen = 'Home';
+
+  // Form Validator
   static const String nameRequired = 'Name is required';
   static const String errorNameRequired = 'Name must be a-z and A-Z';
   static const String mobileNumberRequired = 'Mobile phone number is required';

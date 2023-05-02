@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/src/features/home/screen/home_screen.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../features/feature_widgets.dart';
@@ -57,6 +58,15 @@ class AppRouter {
           pageBuilder: (context, state) {
             return const MaterialPage(
               child: Welcome(),
+            );
+          },
+        ),
+        GoRoute(
+          name: AppRouteConstants.homeRouteName,
+          path: '/home',
+          pageBuilder: (context, state) {
+            return const MaterialPage(
+              child: HomeScreen(),
             );
           },
         ),
