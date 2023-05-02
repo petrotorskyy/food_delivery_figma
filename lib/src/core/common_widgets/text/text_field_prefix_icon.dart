@@ -6,17 +6,23 @@ class TextFieldPrefixIcon extends StatelessWidget {
     required this.emailController,
     required this.text,
     required this.icon,
+    required this.validate,
+    this.isPassword = false,
   });
 
   final TextEditingController emailController;
   final String text;
   final Icon icon;
+  final bool isPassword;
+
+  final String? Function(String?)? validate;
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      obscureText: true,
+    return TextFormField(
+      obscureText: isPassword ? true : false,
       controller: emailController,
+      validator: validate,
       decoration: InputDecoration(
         prefixIcon: icon,
         border: const OutlineInputBorder(

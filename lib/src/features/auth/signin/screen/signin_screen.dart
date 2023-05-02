@@ -28,6 +28,13 @@ class _SignInScreenState extends State<SignInScreen> {
     });
   }
 
+  @override
+  void dispose() {
+    nameController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
+
   late final bool active = true;
   final _formLoginKey = GlobalKey<FormState>();
 
@@ -41,40 +48,50 @@ class _SignInScreenState extends State<SignInScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(30),
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            SafeArea(
-              child: SignInForm(
-                active: widget.active,
-                onChanged: _showForgotTap,
+    return Center(
+      child: Form(
+        key: _formLoginKey,
+        child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
+          child: Column(
+            children: [
+              SafeArea(
+                child: Padding(
+                  padding: const EdgeInsets.all(30),
+                  child: Column(
+                    children: [
+                      SignInForm(
+                        active: widget.active,
+                        onChanged: _showForgotTap,
+                      ),
+                      const SizedBox(
+                        height: AppDimensions.height10,
+                      ),
+                      Align(
+                        alignment: Alignment.center,
+                        child: Text(
+                          AppString.textOr,
+                          style: Theme.of(context)
+                              .textTheme
+                              .labelSmall!
+                              .copyWith(color: Colors.black),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: AppDimensions.height20,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          SocialButtonsColumn(),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
               ),
-            ),
-            const SizedBox(
-              height: AppDimensions.height10,
-            ),
-            Align(
-              alignment: Alignment.center,
-              child: Text(
-                AppString.textOr,
-                style: Theme.of(context)
-                    .textTheme
-                    .labelSmall!
-                    .copyWith(color: Colors.black),
-              ),
-            ),
-            const SizedBox(
-              height: AppDimensions.height20,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                SocialButtonsColumn(),
-              ],
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

@@ -21,10 +21,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   @override
   void dispose() {
-    nameRegisterController.clear();
-    mobileController.clear();
-    passwordController.clear();
-    confirmPasswordController.clear();
+    nameRegisterController.dispose();
+    mobileController.dispose();
+    passwordController.dispose();
+    confirmPasswordController.dispose();
     super.dispose();
   }
 
