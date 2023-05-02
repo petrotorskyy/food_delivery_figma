@@ -24,13 +24,17 @@ This project is a starting point for a Flutter application from Figma.
 ## To Generate Android release steps:
 
 ### Generate FAT APK
+<ul>
+<li>flutter clean</li>
+<li>flutter build apk --release</li>
+</ul>
 
-flutter clean
-flutter build apk --release
 Generate split APK's
 
-flutter clean
-flutter build apk --split-per-abi --release
+<ul>
+<li>flutter clean</li>
+<li>flutter build apk --split-per-abi --release</li>
+</ul>
 
 ### iOS release steps 
 
@@ -38,10 +42,13 @@ Set iOS deployment target
 
 Follow below steps
 
-setup flutter sdk
-get packages
-open runner.xcworkspace from ids folder
-update version code in yaml
+<ul>
+<li>setup flutter sdk</li>
+<li>get packages</li>
+<li>open runner.xcworkspace from ids folder</li>
+<li>update version code in yaml</li>
+</ul>
+
 Bellow commands will generate the runner.app file
 
 flutter clean
