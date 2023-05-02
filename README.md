@@ -44,7 +44,7 @@ This project is a starting point for a Flutter application from Figma.
 #### Screenshots
 
 #### Splash Screen
-<img src="screenshots\splash_screen.png" alt="Splash Screen - Flutter Food Delivery from Figma" title="Splash Screen - Flutter Food Delivery from Figma" height="420" width="297"/>
+<img src="screenshots\splash_screen.png" alt="Splash Screen - Flutter Food Delivery from Figma" title="Splash Screen - Flutter Food Delivery from Figma" height="480" width="320"/>
 
 #### OnBoarding Screen
 
