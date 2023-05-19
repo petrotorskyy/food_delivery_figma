@@ -6,3 +6,4 @@ export 'text/text_skip.dart';
 export 'text/text_field_auth.dart';
 export 'text/text_field_prefix_icon.dart';
 export 'logo/logo_svg.dart';
+export 'navigation_bar/app_navigation_bar.dart';

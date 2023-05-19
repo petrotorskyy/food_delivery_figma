@@ -7,6 +7,12 @@ abstract class AppString {
   static const String skip = 'skip >>';
   static const String buttonStart = 'Get started!';
 
+  // BottomNavigationBar
+  static const String textHome = 'Home';
+  static const String textMore = 'Offers';
+  static const String textCart = 'Cart';
+  static const String textAccount = 'Account';
+
   //Welcome
 
   static const String titleWelcome = 'Welcome,\nSumanya!';
@@ -58,4 +64,10 @@ abstract class AppString {
   static const String errorValidEmail = 'Enter Valid Email';
   static const String errorPasswordMatch = 'Password doesn\'t match';
   static const String passwordConfirmRequired = 'Confirm password is required';
+
+  // Account Screen
+  static const String textPersonalDetails = 'Personal details';
+
+  // Cart
+  static const String textOrder = 'Your Order';
 }

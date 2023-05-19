@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/common_widgets/widgets.dart';
-import '../../../core/constants/const.dart';
 import '../../feature_widgets.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class InitialScreen extends StatefulWidget {
+  const InitialScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<InitialScreen> createState() => _InitialScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _InitialScreenState extends State<InitialScreen> {
   int _selectedTab = 0;
 
   final List _pages = [
@@ -31,11 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const SafeArea(
-        child: Center(
-          child: Text(AppString.textHome),
-        ),
-      ),
+      body: _pages[_selectedTab],
       bottomNavigationBar: AppBottomNavigationBar(
         selectedTab: _selectedTab,
         onTap: (index) => _changeTab(index),

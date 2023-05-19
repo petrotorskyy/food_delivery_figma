@@ -14,6 +14,12 @@ abstract class AppColors {
   static const Color textSkipColor = Color.fromRGBO(255, 255, 255, 0.6);
   static const Color textSkipShadow = Color.fromRGBO(0, 0, 0, 0.25);
 
+  // BottomNavigationBar
+  static const Color bottomNavigBarSelectedColor = Color(0xffFF6838);
+  static const Color bottomNavigBarUnSelectedColor = Color(0xff000000);
+  static const Color bottomNavigBarTextColor = Color(0xff000000);
+  static const Color bottomNavigBarIconColor = Color(0xff000000);
+
   //SignIn Screen
 
   static const Color signInScreenBg = Color(0xFFF2F2F2);
