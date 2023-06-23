@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:food_delivery/src/features/auth/widgets.dart';
 
+import '../../core/injection.dart';
+import 'presentation/signin/bloc/signin_bloc.dart';
 import 'widgets/widgets.dart';
 
 class AuthScreen extends StatefulWidget {
@@ -29,24 +32,30 @@ class _AuthScreenState extends State<AuthScreen> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height * 0.18;
+
     return DefaultTabController(
       length: 2,
-      child: Scaffold(
-        backgroundColor: const Color(0xFFF2F2F2),
-        appBar: AuthAppBar(height: height), //AppBar
-        body: TabBarView(
-          children: [
-            _active
-                ? SignInScreen(
-                    active: _active,
-                    onChanged: _loginForgotChanged,
-                  )
-                : ForgotPasswordScreen(
-                    active: _active,
-                    onChanged: _loginForgotChanged,
-                  ),
-            const SignUpScreen(),
-          ],
+      child: BlocProvider(
+        create: (BuildContext context) {
+          return Injection.getIt.get<LoginBloc>();
+        },
+        child: Scaffold(
+          backgroundColor: const Color(0xFFF2F2F2),
+          appBar: AuthAppBar(height: height), //AppBar
+          body: TabBarView(
+            children: [
+              _active
+                  ? SignInScreen(
+                      active: _active,
+                      onChanged: _loginForgotChanged,
+                    )
+                  : ForgotPasswordScreen(
+                      active: _active,
+                      onChanged: _loginForgotChanged,
+                    ),
+              const SignUpScreen(),
+            ],
+          ),
         ),
       ), //Scaffold
       //Removing Debug Banner

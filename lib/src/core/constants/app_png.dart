@@ -1,6 +1,9 @@
 abstract class AppPng {
   static const String logo = 'assets/logo/logo_pngAboard.png';
 
+  //Default avatar for user
+  static const defaultAvatar = 'assets/avatar/avatar-placeholder.png';
+
   //Splash Screen
   static const String bgSplash = 'assets/splash/png/bg.png';
   static const String ellipse15 = 'assets/splash/png/Ellipse15.png';

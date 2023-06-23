@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/src/core/services/auth/auth_services.dart';
 
 import '../../../../core/common_widgets/widgets.dart';
 import '../../../../core/constants/const.dart';
@@ -9,19 +10,19 @@ class SocialButtonsColumn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: const [
-        ButtonSocial(
+      children: [
+        const ButtonSocial(
           onPress: loginWithFacebook,
           icon: AppSvg.iconFacebookSvg,
           text: AppString.buttonTextFacebook,
           buttonColor: Colors.blue,
           textColor: Colors.white,
         ),
-        SizedBox(
+        const SizedBox(
           height: AppDimensions.height20,
         ),
         ButtonSocial(
-          onPress: loginWithGoogle,
+          onPress: () => AuthServices().signInWithGoogle(), //loginWithGoogle,
           icon: AppSvg.iconGoogleSvg,
           text: AppString.buttonTextGoogle,
           buttonColor: Colors.white,
@@ -34,4 +35,6 @@ class SocialButtonsColumn extends StatelessWidget {
 
 void loginWithFacebook() {}
 
-void loginWithGoogle() {}
+void loginWithGoogle() {
+  AuthServices().signInWithGoogle();
+}

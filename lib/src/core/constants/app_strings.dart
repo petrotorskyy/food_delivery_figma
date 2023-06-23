@@ -1,4 +1,13 @@
 abstract class AppString {
+  //Firebase Auth Exception
+  static const String emailInUseException = 'This email already in use';
+  static const String invalidEmailException = 'The email is incorrect';
+  static const String weakPasswordException = 'This password is weak';
+  static const String userNotFoundException = 'User is not registered';
+  static const String wrongPasswordException = 'The password is incorrect';
+  static const String tooManyRequestException = 'Logged in multiple times';
+  static const String userDisabledException = 'Email is disabled';
+
   //Splash Screen
   static const String textSplash = 'Food for Everyone';
 

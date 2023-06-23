@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/src/features/first/first.dart';
 
 import '../../../core/common_widgets/widgets.dart';
-import '../../../core/constants/const.dart';
 import '../../feature_widgets.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -16,10 +16,14 @@ class _HomeScreenState extends State<HomeScreen> {
 
   final List _pages = [
     const Center(
-      child: HomeScreen(),
+      child: First(),
     ),
-    const CartScreen(),
-    const AccountScreen(),
+    const Center(
+      child: CartScreen(),
+    ),
+    const Center(
+      child: ProfileScreen(),
+    ),
   ];
 
   _changeTab(int index) {
@@ -31,10 +35,8 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const SafeArea(
-        child: Center(
-          child: Text(AppString.textHome),
-        ),
+      body: SafeArea(
+        child: _pages.elementAt(_selectedTab),
       ),
       bottomNavigationBar: AppBottomNavigationBar(
         selectedTab: _selectedTab,

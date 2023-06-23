@@ -18,7 +18,7 @@ class _InitialScreenState extends State<InitialScreen> {
       child: HomeScreen(),
     ),
     const CartScreen(),
-    const AccountScreen(),
+    const ProfileScreen(),
   ];
 
   _changeTab(int index) {
